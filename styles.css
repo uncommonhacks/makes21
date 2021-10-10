@@ -1,0 +1,600 @@
+/*
+ * styles.css - Style lives here.
+ */
+
+@font-face {
+  font-family: "silkscreen";
+  src: url("fonts/silkscreen.ttf") format("truetype");
+} 
+
+@font-face {
+  font-family: "open-sans-semibold";
+  src: url("fonts/open-sans-semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "open-sans-light";
+  src: url("fonts/open-sans-light.ttf") format("truetype");
+}
+
+:root {
+  --body-font-color: white;
+  --body-font-family: "open-sans-semibold";
+  --header-font-color: #f9e512;
+  --header-font-family: "silkscreen";
+  --header-font-size: 8vw;
+  --mobile-about-offset: 200vw;
+  --mobile-faq-offset: 400vw;
+  --mobile-schedule-offset: 600vw;
+  --mobile-sponsors-offset: 850vw;
+  --mobile-height: 1020vw;
+  /* If world-height is updated, update the media query
+    * at bottom of file too. */
+  --world-height: 60vw; 
+}
+
+/*** MOBILE **/
+html, body {
+  margin: 0;
+}
+
+a {
+  color: var(--body-font-color);
+  text-decoration: underline;
+}
+
+.mobile {
+  display: initial;
+}
+
+.desktop {
+  display: none;         
+}
+
+.no-highlight {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/** MOBILE - GENERAL **/
+
+#mlh-trust-badge {
+  position: absolute;
+  right: 2vw;
+  top: 0;
+  width: 10vw;
+  z-index: 11;
+}
+
+
+#mobile-container {
+  height: var(--mobile-height);
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 100vw;
+}
+
+.mobile-background {
+  z-index: 0;
+}
+
+.mobile-background embed {
+  display: block;
+  height: auto;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.blk {
+  margin: 0;
+}
+
+.subblk {
+  margin: 0;
+}
+
+
+/** MOBILE - LANDING **/
+
+#mobile-landing-img1 {
+  left: 0vw;
+  overflow: hidden;
+  position: absolute;
+  top: 45vw;
+  z-index: 1;
+}
+
+#mobile-landing-txt1 {
+  color: var(--body-font-color);
+  font-family: var(--header-font-family);
+  font-size: 10vw;
+  left: 0vw;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 7vw;
+  z-index: 1;
+}
+
+#mobile-landing-txt2 {
+  color: var(--body-font-color);
+  font-family: var(--header-font-family);
+  font-size: 5vw;
+  left: 64vw;
+  overflow: hidden;
+  position: absolute;
+  top: 39vw;
+  z-index: 1;
+}
+
+#mobile-landing-txt3 {
+  color: var(--body-font-color);
+  font-family: var(--header-font-family);
+  font-size: 5vw;
+  left: 64vw;
+  overflow: hidden;
+  position: absolute;
+  text-decoration: underline;
+  top: 52vw;
+  z-index: 1;
+}
+
+
+/** MOBILE - ABOUT **/
+
+#mobile-about-img1 {
+  left: 0vw;
+  overflow: hidden;                    
+  position: absolute;
+  top: var(--mobile-about-offset);
+  width: 100vw;
+  z-index: 1;
+}
+
+#mobile-about-img2 {
+  left: 10vw;
+  overflow: hidden;                    
+  position: absolute;
+  top: calc(var(--mobile-about-offset) + 90vw);
+  width: 8vw;
+  z-index: 1;
+}
+
+#mobile-about-txt1 {
+  font-family: var(--header-font-family);
+  color: var(--header-font-color);
+  font-size: var(--header-font-size);                   
+  left: 12vw;
+  overflow: hidden;                    
+  position: absolute;
+  top: calc(var(--mobile-about-offset) + 105vw);
+  z-index: 1;
+}
+
+#mobile-about-txt2 {
+  color: var(--body-font-color);    
+  font-family: var(--body-font-family);
+  font-size: 4vw;                   
+  left: 16vw;
+  overflow: hidden;                    
+  position: absolute;
+  top: calc(var(--mobile-about-offset) + 115vw);
+  width: 70vw;
+  z-index: 1;
+}
+
+
+/** MOBILE - FAQ **/
+
+#mobile-faq-img1 {
+  left: 0vw;
+  overflow: hidden;                    
+  position: absolute;
+  top: var(--mobile-faq-offset);
+  width: 100vw;
+  z-index: 1;
+}
+
+#mobile-faq-img2 {
+  left: 10vw;
+  overflow: hidden;                    
+  position: absolute;
+  top: calc(var(--mobile-faq-offset) + 47vw);
+  width: 8vw;
+  z-index: 1;
+}
+
+#mobile-faq-txt1 {
+  color: var(--header-font-color);
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);                      
+  left: 12vw;
+  overflow: hidden;
+  position: absolute;
+  top: calc(var(--mobile-faq-offset) + 62vw);
+  z-index: 1;
+}
+
+#mobile-faq-blk1 {
+  color: var(--body-font-color);
+  font-family: var(--body-font-family);
+  font-size:4vw;                      
+  height: 100vw;
+  left: 10vw;
+  overflow: auto;
+  position: absolute;
+  top: calc(var(--mobile-faq-offset) + 76vw);
+  width: 80vw;
+  z-index: 1;
+}
+
+
+/** MOBILE - SCHEDULE **/
+
+#mobile-schedule-img1 {
+  left: 0vw;
+  overflow: hidden;                    
+  position: absolute;
+  top: var(--mobile-schedule-offset);
+  width: 100vw;
+  z-index: 1;
+}
+
+#mobile-schedule-img2 {
+  left: 10vw;
+  overflow: hidden;                    
+  position: absolute;
+  top: calc(var(--mobile-schedule-offset) + 70vw);
+  width: 8vw;
+  z-index: 1;
+}
+
+#mobile-schedule-txt1 {
+  color: var(--header-font-color);                      
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);                      
+  left: 12vw;
+  overflow: hidden;
+  position: absolute;
+  top: calc(var(--mobile-schedule-offset) + 84vw);
+  z-index: 1;
+}
+
+#mobile-schedule-blk1 {
+  color: var(--body-font-color);
+  font-family: var(--body-font-family);
+  font-size: 3vw;                      
+  height: 125vw;
+  left: 10vw;
+  overflow: auto;
+  position: absolute;
+  top: calc(var(--mobile-schedule-offset) + 100vw);
+  width: 80vw;                            
+  z-index: 1;
+}
+
+/** MOBILE - SPONSORS **/
+#gs {
+  width: 40vw;
+  left: 5vw;
+  position: absolute;
+  top: calc(var(--mobile-sponsors-offset));
+  z-index: 1;
+}
+
+#peak6 {
+  width: 40vw;
+  right: 5vw;
+  position: absolute;
+  top: calc(var(--mobile-sponsors-offset) + 5vw);
+  z-index: 1;
+}
+
+#imc {
+  width: 46vw;
+  position: absolute;
+  right: 27vw;
+  top: calc(var(--mobile-sponsors-offset) + 26vw);
+  z-index: 1;     
+}
+
+#belvedere {
+  width: 40vw;
+  position: absolute;
+  left: 7vw;
+  top: calc(var(--mobile-sponsors-offset) + 50vw);
+  z-index: 1;
+}
+
+#cdac {
+  width: 40vw;
+  position: absolute;
+  left: 53vw;
+  top: calc(var(--mobile-sponsors-offset) + 45vw);
+  z-index: 1;
+}
+
+#n26 {
+  width: 25vw;
+  position: absolute;
+  left: 8vw;
+  top: calc(var(--mobile-sponsors-offset) + 110vw);
+  z-index: 1;
+}
+
+#pathrise {
+  width: 38vw;
+  position: absolute;
+  left: 30vw;
+  top: calc(var(--mobile-sponsors-offset) + 140vw);
+  z-index: 1;
+}
+
+#flt {
+  width: 50vw;
+  position: absolute;
+  left: 24vw;
+  top: calc(var(--mobile-sponsors-offset) + 90vw);
+  z-index: 1;
+}
+
+#smule {
+  width: 38vw;
+  position: absolute;
+  left: 52vw;
+  top: calc(var(--mobile-sponsors-offset) + 108vw);
+  z-index: 1;
+}
+
+
+
+/*** DESKTOP ***/
+@media (min-device-width: 800px) and (min-width: 800px) {
+  html, body{
+    margin: 0;
+  }
+
+  .desktop {
+    display: initial;
+  }
+  
+  .mobile {
+    display: none;
+  }
+
+  #mobile-container {
+    height: 0;
+  }
+
+  #desktop-container {
+    height: var(--world-height);
+    display: block;
+    margin: 0;
+    overflow: scroll;
+    position: absolute;
+    width: 100vw;
+  }
+
+  #backdrop-container {
+    height: var(--world-height);
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+  }
+
+  #backdrop {
+    display: block;
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    z-index: 0;
+  }
+
+  #world-container {
+    height: var(--world-height);
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+  }
+
+  #world {
+    left: -76vw;
+    margin: 0;
+    position: absolute;
+    top: -39vw;
+    width: 260vw;
+    z-index: 1;
+  }
+
+  #sketchpad{
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    z-index: 9;
+  }
+  
+  #mlh-trust-badge {
+    display:block;
+    max-width:75px;
+    position:absolute;
+    right: 5vw;
+    top:0;
+    width:6vw;
+    z-index: 10;
+  }
+  
+  /** Headers **/
+
+  .header-text {
+    color: var(--header-font-color);
+    font-family: var(--header-font-family);
+    font-size: 2.2vw;
+    position: absolute;
+    z-index: 2;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.15);
+  }
+
+  .subhead {
+    color: var(--body-font-color);
+    font-family: var(--body-font-family);
+    font-size: 1.5vw;
+    position: absolute;
+    z-index: 2;
+    letter-spacing: 2px;
+    right: 37.5vw;
+    top: 11.6vw;
+  }
+
+  /* .info-text {
+    color: var(--header-font-color);
+    font-family: var(--header-font-family);
+    font-size: 2.2vw;
+    position: absolute;
+    z-index: 2;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.15);
+  } */
+
+  #main-text {
+    font-size: 3.7vw;
+    right: 21vw;
+    top: 4.2vw;
+    text-shadow:none;
+  }
+
+  #faq-text {
+    left: 16vw;
+    top: 17.7vw;
+  }
+
+  #register-text {
+    left: 27.5vw;
+    top: 2.6vw;
+  }
+
+  #schedule-text {
+    left: 42.8vw;
+    top: 34.9vw;
+  }
+
+  #sponsors-text {
+    right: 1vw;
+    top: 12vw;
+  }
+
+  #about-text {
+    right: 9.7vw;
+    top: 30vw;
+  }
+
+  /** PINS **/
+
+  .pin {
+    position: absolute;
+    width: 2.2vw;
+    z-index: 2;
+  }
+
+  #pin1 { /* faq */
+    left: 16.9vw;
+    top: 19.9vw;
+  }
+
+  #pin2 { /* register */
+    left: 31.9vw;
+    top: 5vw;
+  }
+        
+  #pin3 { /* schedule */
+    left: 47.8vw;
+    top: 37.3vw;
+  }
+
+  #pin4 { /* sponsor */
+    right: 6.5vw;
+    top: 14.3vw;
+  }
+
+  #pin5 { /* about */
+    right: 12.2vw;
+    top: 32.2vw;
+  }
+
+  /*** CHARACTERS ***/
+  .character {
+    position: absolute;
+    z-index: 2;
+  }
+
+  #character1 { /* lighthouse - faq */
+    left: 10.3vw;
+    top: 28vw;
+    width: 2.2vw;
+  }
+
+  #character2 { /* mayor - registration */
+    left: 42.9vw;
+    top: 17.5vw;
+    width: 2.2vw;
+  }
+
+  #character3 { /* resident - about */
+    left: 77.2vw;
+    top: 39.5vw;
+    width: 2.6vw;
+  }
+
+  #character4 { /* mapshop - schedule */
+    left: 47.83vw;
+    top: 42.15vw;
+    width: 2.366vw;
+  }
+
+  #banner{
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    height: 17vw;
+    z-index: 12;
+    font-size: 6px;
+  }
+
+  #drape {
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    z-index: 12;
+    font-size: 6px;
+  }
+
+  #help {
+    margin: 0;
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    right: 0.5vw;
+    top: 1vw;
+  }
+}
+
+/* Backdrop should fill height. So, if the display height
+ * exceeds the world height. */
+@media (min-device-width: 800px) and (min-width: 800px) and (min-height: 60vw) {
+  #desktop-container {
+    height: 100vh;
+  }       
+
+  #backdrop-container {
+    height: 100vh;
+  }       
+
+  #world-container {
+    height: 100vh;
+  }       
+}
+
