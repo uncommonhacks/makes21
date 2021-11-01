@@ -404,11 +404,11 @@ a {
   }
 
   #world {
-    left: -76vw;
+    /* left: -76vw; */
     margin: 0;
     position: absolute;
-    top: -39vw;
-    width: 260vw;
+    /* top: -39vw; */
+    width: 100vw;
     z-index: 1;
   }
 
