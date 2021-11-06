@@ -468,28 +468,38 @@ a {
   }
 
   #faq-text {
-    left: 72.4vw;
-    top: 15vw;
+    left: 57.4vw;
+    top: 20vw;
   }
 
   #register-text {
-    left: 27.5vw;
-    top: 2.6vw;
+    left: 75vw;
+    top: 43.5vw;
   }
 
   #schedule-text {
-    left: 42.8vw;
-    top: 34.9vw;
+    left: 31vw;
+    top: 43.5vw;
   }
 
-  #sponsors-text {
+  #sponsors-text { /* not relevant for makes */
     right: 1vw;
     top: 12vw;
   }
 
   #about-text {
-    right: 9.7vw;
-    top: 30vw;
+    right: 76vw;
+    top: 34.5vw;
+  }
+
+  #workshops-text {
+    left: 29.5vw;
+    top: 20vw;
+  }
+
+  #projects-text {
+    right: 1vw;
+    top: 20vw;
   }
 
   /** PINS **/
@@ -501,28 +511,38 @@ a {
   }
 
   #pin1 { /* faq */
-    left: 73.4vw;
+    left: 49.8vw;
     top: 18vw;
   }
 
   #pin2 { /* register */
-    left: 31.9vw;
-    top: 5vw;
+    left: 80.8vw;
+    top: 47vw;
   }
         
   #pin3 { /* schedule */
-    left: 47.8vw;
-    top: 37.3vw;
+    left: 37.8vw;
+    top: 47.3vw;
   }
 
-  #pin4 { /* sponsor */
+  #pin4 { /* sponsor --> not relevant for makes */ 
     right: 6.5vw;
     top: 14.3vw;
   }
 
   #pin5 { /* about */
-    right: 12.2vw;
+    right: 89.3vw;
     top: 32.2vw;
+  }
+
+  #pin6 { /* workshops */
+    left: 27.3vw;
+    top: 18.7vw;
+  }
+
+  #pin7 { /* projects */
+    right: 24.3vw;
+    top: 18.5vw;
   }
 
   /*** CHARACTERS ***/
