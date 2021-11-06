@@ -4,109 +4,126 @@
 
 /** CONSTANTS **/
 
-const SCHEDULE_TXT_DAY_1 = ("09:00 |am – Doors Open \n"
-                            +"09:30 |am – Breakfast Available\n"
-                            + "10:00 |am – sponsor fair starts\n"
-                            + "11:00 |am – team formation\n"
-                            + "11:30 |am – opening ceremony\n"
-                            + "12:00 |PM – hacking starts\n"
-                            + "12:30 |PM – lunch: sponsored by IMC\n"
-                            + "01:30 |PM – VR Workshop\n"
-                            + "02:00 |PM – sponsor fair ends\n"
-                            + "02:45 |PM – Workshop #2\n"
-                            + "03:45 |PM – MLH: Slideshow Karaoke\n"
-                            + "05:00 |PM – Intercontinental Battleship\n"
-                            + "06:30 |PM – dinner\n"
-                            + "07:30 |PM – MLH: CTF \n"
-                            + "07:30 |PM – La Croix Taste Test\n"
-                            + "08:30 |PM – Pictionary\n"
-                            + "10:00 |PM – ;)");
-const SCHEDULE_TXT_DAY_2 = ("12:00 |am – soylent pong\n"
-                            + "08:00 |am – breakfast\n"
-                            + "08:30 |am – Origami\n"
-                            + "11:30 |am - Submit to Devpost\n"
-                            + "12:00 |PM – hacking ends\n"
-                            + "12:00 |PM – lunch\n"
-                            + "01:00 |PM – Judging starts\n"
-                            + "02:30 |PM – Judging ends\n"
-                            + "03:00 |PM – Live demos\n"
-                            + "03:30 |PM – prizes\n"
-                            + "04:00 |PM – Closing Ceremony");
+const SCHEDULE_TXT_DAY_1 =
+  "09:00 |am – Doors Open \n" +
+  "09:30 |am – Breakfast Available\n" +
+  "10:00 |am – sponsor fair starts\n" +
+  "11:00 |am – team formation\n" +
+  "11:30 |am – opening ceremony\n" +
+  "12:00 |PM – hacking starts\n" +
+  "12:30 |PM – lunch: sponsored by IMC\n" +
+  "01:30 |PM – VR Workshop\n" +
+  "02:00 |PM – sponsor fair ends\n" +
+  "02:45 |PM – Workshop #2\n" +
+  "03:45 |PM – MLH: Slideshow Karaoke\n" +
+  "05:00 |PM – Intercontinental Battleship\n" +
+  "06:30 |PM – dinner\n" +
+  "07:30 |PM – MLH: CTF \n" +
+  "07:30 |PM – La Croix Taste Test\n" +
+  "08:30 |PM – Pictionary\n" +
+  "10:00 |PM – ;)";
+const SCHEDULE_TXT_DAY_2 =
+  "12:00 |am – soylent pong\n" +
+  "08:00 |am – breakfast\n" +
+  "08:30 |am – Origami\n" +
+  "11:30 |am - Submit to Devpost\n" +
+  "12:00 |PM – hacking ends\n" +
+  "12:00 |PM – lunch\n" +
+  "01:00 |PM – Judging starts\n" +
+  "02:30 |PM – Judging ends\n" +
+  "03:00 |PM – Live demos\n" +
+  "03:30 |PM – prizes\n" +
+  "04:00 |PM – Closing Ceremony";
 const HACKER_GUIDE_URL = "https://github.com/uncommonhacks/guide";
-const HELP_TXT = ("* Use W, A, S, D to move. \n"
-                  + "* Click on the pins to\n"
-                  + "   teleport around the \n"
-                  + "   map.\n");
+const HELP_TXT =
+  "* Use W, A, S, D to move. \n" +
+  "* Click on the pins to\n" +
+  "   teleport around the \n" +
+  "   map.\n";
 const MLH_COC_URL = "https://static.mlh.io/docs/mlh-code-of-conduct.pdf";
 const HELP_BUTTON_RECT = [1190, 1240, 20, 55];
 const HELP_MLH_COC_RECT = [115, 1135, 270, 310];
 const SCHED_EXIT_RECT = [370, 415, 85, 120];
 const DRAPE_EXIT_RECT = [370, 415, 35, 70];
 
-const ABOUT_INITIAL_TEXT = ("Uncommon hacks is a weekend-long celebration of technology where college "
-                            + "students from everywhere come to chicago to make fun, random, and innovative " 
-                            + "tech-related projects with friends old and new. You'll work in a small team "
-                            + "to design and build a creative project from start to finish in a weekend, learning "
-                            + "and having fun in the process.");
+const ABOUT_INITIAL_TEXT =
+  "Uncommon hacks is a weekend-long celebration of technology where college " +
+  "students from everywhere come to chicago to make fun, random, and innovative " +
+  "tech-related projects with friends old and new. You'll work in a small team " +
+  "to design and build a creative project from start to finish in a weekend, learning " +
+  "and having fun in the process.";
 
-const FAQ_INITIAL_TEXT = ("+ What\'s a hackathon? "
-                          + "+ How do I apply? "
-                          + "+ When and where is uncommon hacks? "
-                          + "+ Can I form my own team? "
-                          + "+ How much does it cost? "
-                          + "+ Do you offer travel reimbursement? "
-                          + "+ What is the application process? "
-                          + "+ What exactly happens at a hackathon? "
-                          + "+ Do you have other rules? "
-                          + "+ What if i have another question? ");
-const FAQ_ANSWER_1 = ("Hackathons are invention marathons where attendees "
-                      + "are encouraged to collaborate on a project. "
-                      + "Hackers will be in a fun, supportive environment "
-                      + "with the necessary tools provided to create excellent projects. "
-                      + "Newbies encouraged, normies aren’t. This is a safe space to "
-                      + "create the weirdest, quirkiest, and most amazing projects ever.\n "
-                      + "College students from anywhere are welcome, even if you’re not a computer "
-                      + "science major or have never been to a hackathon before!");
-const FAQ_ANSWER_2 = ("Click the registration button above! "
-                      + "due to space constraints, we’re unable to accept everyone, "
-                      + "but we’re looking for students with a broad variety of interests "
-                      + "and backgrounds who are excited about building crazy "
-                      + "things and learning in the process. If you’ve never "
-                      + "been to a hackathon or don’t have tons of software "
-                      + "development experience, that won’t disadvantage you in the review process! "
-                      + "We’ll review the first wave of applications starting january 1st, "
-                      + "and send out decisions mid-january. ");
-const FAQ_ANSWER_3 = ("February 15-16, 2020 @ the Polsky Exchange, "
-                      + "1452 E 53rd st, 2nd floor, Chicago, IL, 60615.");
-const FAQ_ANSWER_4 = ("Yes! We allow teams of up to 4. You can make your team before the event happens,"
-                      + "or you can find a teammate during our team matching event when you get here.");
-const FAQ_ANSWER_5 = ("Nothing! Uncommon Hacks will provide wifi, meals, swag, and workspace ");
-const FAQ_ANSWER_6 = ("This year, we will not be offering travel reimbursement "
-                      + "for uncommon hacks. If you have any questions or concerns "
-                      + "about travel, feel free to message us or email us at celery@uncommonhacks.com! ");
-const FAQ_ANSWER_7 = ("The process starts out with the hackathon application, which consists "
-                      + "of basic personal questions as well as a few short answer ones. "
-                      + "The uncommon hacks team will be reviewing the applications in waves, "
-                      + "and the results of your application should show in your application "
-                      + "portal. If you’ve been accepted, you will have an RSVP link to complete "
-                      + "as confirmation of your attendance. From there, you’re all set - see you in Chicago!");
-const FAQ_ANSWER_8 = ("Click here to read a detailed guide about what uncommon hacks "
-                      + "is like from a hacker’s perspective.");
-const FAQ_ANSWER_9 = ("Yes, we follow the major league hacking code of conduct. Click here to read it.");
-const FAQ_ANSWER_10 = ("Email celery@uncommonhacks.com or shoot us a facebook message ");
-const REGISTRATION_TEXT = ("Click here to register");
-const REGISTRATION_URL = ("https://uncommon-hacks.typeform.com/to/DyXjDG");
+const FAQ_INITIAL_TEXT =
+  "+ What's a hackathon? " +
+  "+ How do I apply? " +
+  "+ When and where is uncommon hacks? " +
+  "+ Can I form my own team? " +
+  "+ How much does it cost? " +
+  "+ Do you offer travel reimbursement? " +
+  "+ What is the application process? " +
+  "+ What exactly happens at a hackathon? " +
+  "+ Do you have other rules? " +
+  "+ What if i have another question? ";
+const FAQ_ANSWER_1 =
+  "Hackathons are invention marathons where attendees " +
+  "are encouraged to collaborate on a project. " +
+  "Hackers will be in a fun, supportive environment " +
+  "with the necessary tools provided to create excellent projects. " +
+  "Newbies encouraged, normies aren’t. This is a safe space to " +
+  "create the weirdest, quirkiest, and most amazing projects ever.\n " +
+  "College students from anywhere are welcome, even if you’re not a computer " +
+  "science major or have never been to a hackathon before!";
+const FAQ_ANSWER_2 =
+  "Click the registration button above! " +
+  "due to space constraints, we’re unable to accept everyone, " +
+  "but we’re looking for students with a broad variety of interests " +
+  "and backgrounds who are excited about building crazy " +
+  "things and learning in the process. If you’ve never " +
+  "been to a hackathon or don’t have tons of software " +
+  "development experience, that won’t disadvantage you in the review process! " +
+  "We’ll review the first wave of applications starting january 1st, " +
+  "and send out decisions mid-january. ";
+const FAQ_ANSWER_3 =
+  "February 15-16, 2020 @ the Polsky Exchange, " +
+  "1452 E 53rd st, 2nd floor, Chicago, IL, 60615.";
+const FAQ_ANSWER_4 =
+  "Yes! We allow teams of up to 4. You can make your team before the event happens," +
+  "or you can find a teammate during our team matching event when you get here.";
+const FAQ_ANSWER_5 =
+  "Nothing! Uncommon Hacks will provide wifi, meals, swag, and workspace ";
+const FAQ_ANSWER_6 =
+  "This year, we will not be offering travel reimbursement " +
+  "for uncommon hacks. If you have any questions or concerns " +
+  "about travel, feel free to message us or email us at celery@uncommonhacks.com! ";
+const FAQ_ANSWER_7 =
+  "The process starts out with the hackathon application, which consists " +
+  "of basic personal questions as well as a few short answer ones. " +
+  "The uncommon hacks team will be reviewing the applications in waves, " +
+  "and the results of your application should show in your application " +
+  "portal. If you’ve been accepted, you will have an RSVP link to complete " +
+  "as confirmation of your attendance. From there, you’re all set - see you in Chicago!";
+const FAQ_ANSWER_8 =
+  "Click here to read a detailed guide about what uncommon hacks " +
+  "is like from a hacker’s perspective.";
+const FAQ_ANSWER_9 =
+  "Yes, we follow the major league hacking code of conduct. Click here to read it.";
+const FAQ_ANSWER_10 =
+  "Email celery@uncommonhacks.com or shoot us a facebook message ";
+const REGISTRATION_TEXT = "Click here to register";
+const REGISTRATION_URL = "https://uncommon-hacks.typeform.com/to/DyXjDG";
 const STEP = 3;
 const SCALE = 1;
 const CHARACTER_FRAME_WIDTH = 26;
 const CHARACTER_FRAME_HEIGHT = 41;
 const CHARACTER_CANVAS_WIDTH = SCALE * CHARACTER_FRAME_WIDTH;
 const CHARACTER_CANVAS_HEIGHT = SCALE * CHARACTER_FRAME_HEIGHT;
-const CLEAR_CHARACTER_DELTA_X = CHARACTER_FRAME_WIDTH / 4 * SCALE;
-const CLEAR_CHARACTER_DELTA_Y = CHARACTER_FRAME_HEIGHT / 4 * SCALE;
-const CLEAR_CHARACTER_CANVAS_WIDTH = 2 * CLEAR_CHARACTER_DELTA_X + CHARACTER_CANVAS_WIDTH;
-const CLEAR_CHARACTER_CANVAS_HEIGHT = 2 * CLEAR_CHARACTER_DELTA_Y + CHARACTER_CANVAS_HEIGHT;
-const CHARACTER_POSITIONS_LOOP =  [1, 0, 1, 2];
+const CLEAR_CHARACTER_DELTA_X = (CHARACTER_FRAME_WIDTH / 4) * SCALE;
+const CLEAR_CHARACTER_DELTA_Y = (CHARACTER_FRAME_HEIGHT / 4) * SCALE;
+const CLEAR_CHARACTER_CANVAS_WIDTH =
+  2 * CLEAR_CHARACTER_DELTA_X + CHARACTER_CANVAS_WIDTH;
+const CLEAR_CHARACTER_CANVAS_HEIGHT =
+  2 * CLEAR_CHARACTER_DELTA_Y + CHARACTER_CANVAS_HEIGHT;
+const CHARACTER_POSITIONS_LOOP = [1, 0, 1, 2];
 const FACING_DOWN = 2;
 const FACING_UP = 0;
 const FACING_LEFT = 1;
@@ -115,9 +132,9 @@ const FRAME_LIMIT = 8;
 const MOVEMENT_SPEED = 1 * SCALE;
 const DEBUG = 0;
 const BBFUDGE = 2 * SCALE;
-const BB1XL = 160 * SCALE;
+const BB1XL = 110 * SCALE;
 const BB1XH = BB1XL + CHARACTER_CANVAS_WIDTH;
-const BB1YL = 400 * SCALE - CHARACTER_CANVAS_HEIGHT;
+const BB1YL = 200 * SCALE - CHARACTER_CANVAS_HEIGHT;
 const BB1YH = 420 * SCALE;
 const BB2XL = BB1XH;
 const BB2XH = 400 * SCALE;
@@ -161,17 +178,21 @@ const BB11YH = 295 * SCALE;
 const BB11YL = BB11YH - CHARACTER_CANVAS_HEIGHT;
 
 const BOUNDING_BOXES = [
-  [BB1XL, BB1XH, BB1YL, BB1YH],
-  [BB2XL, BB2XH, BB2YL, BB2YH],
-  [BB3XL, BB3XH, BB3YL, BB3YH],
-  [BB4XL, BB4XH, BB4YL, BB4YH],
-  [BB5XL, BB5XH, BB5YL, BB5YH],
-  [BB6XL, BB6XH, BB6YL, BB6YH],
-  [BB7XL, BB7XH, BB7YL, BB7YH],
-  [BB8XL, BB8XH, BB8YL, BB8YH],
-  [BB9XL, BB9XH, BB9YL, BB9YH],
-  [BB10XL, BB10XH, BB10YL, BB10YH],
-  [BB11XL, BB11XH, BB11YL, BB11YH],
+  [110, 135, 648, 425],
+  [0, 650, 512, 490],
+  [130, 520, 648, 622],
+  [345, 368, 648, 240],
+  [625, 650, 512, 240],
+  [650, 1250, 370, 345],
+  [895, 920, 648, 345],
+  [895, 1050, 648, 622],
+  [920, 945, 370, 220],
+  //   [BB6XL, BB6XH, BB6YL, BB6YH],
+  //   [BB7XL, BB7XH, BB7YL, BB7YH],
+  //   [BB8XL, BB8XH, BB8YL, BB8YH],
+  //   [BB9XL, BB9XH, BB9YL, BB9YH],
+  //   [BB10XL, BB10XH, BB10YL, BB10YH],
+  //   [BB11XL, BB11XH, BB11YL, BB11YH],
 ];
 const TP1XL = 185;
 const TP1YL = 200;
@@ -194,12 +215,12 @@ const TP5YL = 135;
 const TP5XH = 1250;
 const TP5YH = 225;
 const TELEPORT_BOXES = [
-    [TP1XL, TP1XH, TP1YL, TP1YH],
-    [TP2XL, TP2XH, TP2YL, TP2YH],
-    [TP3XL, TP3XH, TP3YL, TP3YH],
-    [TP4XL, TP4XH, TP4YL, TP4YH],
-    [TP5XL, TP5XH, TP5YL, TP5YH],
-    ];
+  [TP1XL, TP1XH, TP1YL, TP1YH],
+  [TP2XL, TP2XH, TP2YL, TP2YH],
+  [TP3XL, TP3XH, TP3YL, TP3YH],
+  [TP4XL, TP4XH, TP4YL, TP4YH],
+  [TP5XL, TP5XH, TP5YL, TP5YH],
+];
 const TP1X = BB1XL;
 const TP1Y = BB1YL;
 const TP2X = BB7XL;
@@ -211,44 +232,24 @@ const TP4Y = BB10YL;
 const TP5X = 1120;
 const TP5Y = 254;
 const TELEPORT_COORDS = [
-    [TP1X, TP1Y],
-    [TP2X, TP2Y],
-    [TP3X, TP3Y],
-    [TP4X, TP4Y],
-    [TP5X, TP5Y],
-    ];
+  [TP1X, TP1Y],
+  [TP2X, TP2Y],
+  [TP3X, TP3Y],
+  [TP4X, TP4Y],
+  [TP5X, TP5Y],
+];
 const faq_answers = [
-    [
-        FAQ_ANSWER_1,
-        ],
-    [
-        FAQ_ANSWER_2,
-        ],
-    [
-        FAQ_ANSWER_3,
-        ],
-    [
-        FAQ_ANSWER_4,
-        ],
-    [
-        FAQ_ANSWER_5,
-        ],
-    [
-        FAQ_ANSWER_6,
-        ],
-    [
-        FAQ_ANSWER_7,
-        ],
-    [
-        FAQ_ANSWER_8,
-        ],
-    [
-        FAQ_ANSWER_9,
-        ],
-    [
-        FAQ_ANSWER_10,
-        ],
-    ];
+  [FAQ_ANSWER_1],
+  [FAQ_ANSWER_2],
+  [FAQ_ANSWER_3],
+  [FAQ_ANSWER_4],
+  [FAQ_ANSWER_5],
+  [FAQ_ANSWER_6],
+  [FAQ_ANSWER_7],
+  [FAQ_ANSWER_8],
+  [FAQ_ANSWER_9],
+  [FAQ_ANSWER_10],
+];
 
 /** GLOBAL VARIABLES **/
 
@@ -263,14 +264,18 @@ var fm_default = 5;
 var fm_answerstxt = 6;
 var abouttext = new Pktext(banner_canvas, banner_ctx, false, 4, fm_default);
 var faqs = new Pktext(banner_canvas, banner_ctx, true, 4, fm_default);
-var answerstxt = new Pktext(banner_canvas, banner_ctx, false, 4,
-                            fm_answerstxt);
-var registrationtxt = new Pktext(banner_canvas, banner_ctx, false, 4, fm_default);
+var answerstxt = new Pktext(banner_canvas, banner_ctx, false, 4, fm_answerstxt);
+var registrationtxt = new Pktext(
+  banner_canvas,
+  banner_ctx,
+  false,
+  4,
+  fm_default
+);
 var answer_index = 0;
 var redraw_banner = false;
 var body_font = "55px open-sans-semibold";
 var answer_font = "55px open-sans-light";
-
 
 var banner_state = "empty";
 var banner_exit = "empty";
@@ -327,8 +332,8 @@ let backarrow_banner_rect = [90, 190, 70, 170];
 var uparrow = new Image(10, 10);
 var downarrow = new Image(10, 10);
 var backarrow = new Image(10, 10);
-var bannerimg = new Image(1000,100);
-var schedule = new Image(1000,1000);
+var bannerimg = new Image(1000, 100);
+var schedule = new Image(1000, 1000);
 
 var belvedere = new Image(2730, 1780);
 belvedere.src = "assets/sponsors/belvedere.png";
@@ -375,7 +380,7 @@ smule.src = "assets/sponsors/smule.png";
 let smule_url = "http://hackp.ac/mlh-stickermule-hackathons";
 let smule_rect = [670, 795, 485, 560];
 
-var help = new Image(1000,1000);
+var help = new Image(1000, 1000);
 var help_clicked = false;
 let help_state = false;
 let help_exit = false;
@@ -407,495 +412,716 @@ function banner_click(event) {
   var y = (event.clientY - rect.top) * scaleY;
   var farright = x >= banner_canvas.width * 0.875;
   var farleft = x <= banner_canvas.width * 0.05;
-  var top = y <= banner_canvas.height/2;
+  var top = y <= banner_canvas.height / 2;
   var bottom = !top;
-  
-  if(rect_contains(uparrow_banner_rect, x, y)){
-      if (banner_state === "faq_questions") {
-          faqs.change_block(-1);
-      }
-      else if(banner_state === "faq_answers") {
-          answerstxt.change_block(-1);
-      }
-      else if(banner_state === "about") {
-          abouttext.change_block(-1);
-      }
-      redraw_banner = true;
-  }
-  else if(rect_contains(downarrow_banner_rect, x, y)){
-      if(banner_state ==="faq_questions") {
-          faqs.change_block(1);
-      }
-      else if(banner_state === "faq_answers") {
-          answerstxt.change_block(1);
-      }
-      else if(banner_state === "about") {
-          abouttext.change_block(1);
-      }
-      redraw_banner = true;
-  }
-  else if(rect_contains(backarrow_banner_rect, x, y)){
-      if (banner_state === "faq_answers"){
-          banner_state = "faq_questions";
-      }
-      else if (banner_state === "faq_questions") {
-          banner_exit = "faq_questions";
-      }
-      else if (banner_state === "about") {
-          banner_exit = "about";
-      }
-      else if (banner_state === "registration") {
-          banner_exit = "registration";
-      }
-      redraw_banner = true;
-  }
-  else if(banner_state === "faq_questions") {
-      if (160 <= y && y <= 280) {
-          n = 0;
-      }
-      else if (280 < y && y <= 400) {
-          n = 1;
-      }
-      else if (400 < y && y <= 520) {
-          n = 2;
-      }
-      else if (520 < y && y <= 640) {
-          n = 3;
-      }
-      else {
-          n = -1;
-      }
 
-      if (n != -1) {
-          if (n + faqs.cblock < faq_answers.length) {
-              answerstxt.update_text(faq_answers[n + faqs.cblock][0]);
-              answer_index = n + faqs.cblock;
-          }
-          banner_state = "faq_answers";
-          answerstxt.reset_block();
+  if (rect_contains(uparrow_banner_rect, x, y)) {
+    if (banner_state === "faq_questions") {
+      faqs.change_block(-1);
+    } else if (banner_state === "faq_answers") {
+      answerstxt.change_block(-1);
+    } else if (banner_state === "about") {
+      abouttext.change_block(-1);
+    }
+    redraw_banner = true;
+  } else if (rect_contains(downarrow_banner_rect, x, y)) {
+    if (banner_state === "faq_questions") {
+      faqs.change_block(1);
+    } else if (banner_state === "faq_answers") {
+      answerstxt.change_block(1);
+    } else if (banner_state === "about") {
+      abouttext.change_block(1);
+    }
+    redraw_banner = true;
+  } else if (rect_contains(backarrow_banner_rect, x, y)) {
+    if (banner_state === "faq_answers") {
+      banner_state = "faq_questions";
+    } else if (banner_state === "faq_questions") {
+      banner_exit = "faq_questions";
+    } else if (banner_state === "about") {
+      banner_exit = "about";
+    } else if (banner_state === "registration") {
+      banner_exit = "registration";
+    }
+    redraw_banner = true;
+  } else if (banner_state === "faq_questions") {
+    if (160 <= y && y <= 280) {
+      n = 0;
+    } else if (280 < y && y <= 400) {
+      n = 1;
+    } else if (400 < y && y <= 520) {
+      n = 2;
+    } else if (520 < y && y <= 640) {
+      n = 3;
+    } else {
+      n = -1;
+    }
+
+    if (n != -1) {
+      if (n + faqs.cblock < faq_answers.length) {
+        answerstxt.update_text(faq_answers[n + faqs.cblock][0]);
+        answer_index = n + faqs.cblock;
       }
-      redraw_banner = true;
-  }
-  else {
-      if (banner_state === "registration") {
-          window.open(REGISTRATION_URL);
-      }
-      else if (banner_state === "faq_answers" && answer_index == 7) {
-          window.open(HACKER_GUIDE_URL);
-      }
-      else if (banner_state === "faq_answers" && answer_index == 8) {
-          window.open(MLH_COC_URL);
-      }
+      banner_state = "faq_answers";
+      answerstxt.reset_block();
+    }
+    redraw_banner = true;
+  } else {
+    if (banner_state === "registration") {
+      window.open(REGISTRATION_URL);
+    } else if (banner_state === "faq_answers" && answer_index == 7) {
+      window.open(HACKER_GUIDE_URL);
+    } else if (banner_state === "faq_answers" && answer_index == 8) {
+      window.open(MLH_COC_URL);
+    }
   }
 }
 
-function draw_banner(bc, bctx, bstate){
-    banner_ctx.drawImage(bannerimg, 0, 0, 1920, 360,
-                         0, 0, 3840, 720);
-    switch(bstate){
+function draw_banner(bc, bctx, bstate) {
+  banner_ctx.drawImage(bannerimg, 0, 0, 1920, 360, 0, 0, 3840, 720);
+  switch (bstate) {
     case "faq_questions":
-        draw_hdr(bctx, "FAQ");
-        draw_text(bctx, faqs, body_font);
-        banner_ctx.drawImage(uparrow, uparrow_src_xl, uparrow_src_xl,
-                             uparrow_src_w, uparrow_src_h,
-                             uparrow_banner_xl, uparrow_banner_yl,
-                             uparrow_banner_w, uparrow_banner_h);
-        banner_ctx.drawImage(downarrow, downarrow_src_xl, downarrow_src_xl,
-                             downarrow_src_w, downarrow_src_h,
-                             downarrow_banner_xl, downarrow_banner_yl,
-                             downarrow_banner_w, downarrow_banner_h);
-        banner_ctx.drawImage(backarrow, backarrow_src_xl, backarrow_src_xl,
-                             backarrow_src_w, backarrow_src_h,
-                             backarrow_banner_xl, backarrow_banner_yl,
-                             backarrow_banner_w, backarrow_banner_h);
-        banner_ctx.drawImage(faq_person, 0, 0, 510, 425, banner_canvas.width * 0.75,
-                             banner_canvas.width*0.0135, banner_canvas.width*0.175,
-                             banner_canvas.width*0.145);
-    break;
+      draw_hdr(bctx, "FAQ");
+      draw_text(bctx, faqs, body_font);
+      banner_ctx.drawImage(
+        uparrow,
+        uparrow_src_xl,
+        uparrow_src_xl,
+        uparrow_src_w,
+        uparrow_src_h,
+        uparrow_banner_xl,
+        uparrow_banner_yl,
+        uparrow_banner_w,
+        uparrow_banner_h
+      );
+      banner_ctx.drawImage(
+        downarrow,
+        downarrow_src_xl,
+        downarrow_src_xl,
+        downarrow_src_w,
+        downarrow_src_h,
+        downarrow_banner_xl,
+        downarrow_banner_yl,
+        downarrow_banner_w,
+        downarrow_banner_h
+      );
+      banner_ctx.drawImage(
+        backarrow,
+        backarrow_src_xl,
+        backarrow_src_xl,
+        backarrow_src_w,
+        backarrow_src_h,
+        backarrow_banner_xl,
+        backarrow_banner_yl,
+        backarrow_banner_w,
+        backarrow_banner_h
+      );
+      banner_ctx.drawImage(
+        faq_person,
+        0,
+        0,
+        510,
+        425,
+        banner_canvas.width * 0.75,
+        banner_canvas.width * 0.0135,
+        banner_canvas.width * 0.175,
+        banner_canvas.width * 0.145
+      );
+      break;
     case "faq_answers":
       draw_hdr(bctx, "FAQ");
       draw_text(bctx, answerstxt, answer_font);
-      banner_ctx.drawImage(uparrow, uparrow_src_xl, uparrow_src_xl,
-                           uparrow_src_w, uparrow_src_h,
-                           uparrow_banner_xl, uparrow_banner_yl,
-                           uparrow_banner_w, uparrow_banner_h);
-      banner_ctx.drawImage(downarrow, downarrow_src_xl, downarrow_src_xl,
-                           downarrow_src_w, downarrow_src_h,
-                           downarrow_banner_xl, downarrow_banner_yl,
-                           downarrow_banner_w, downarrow_banner_h);
-        banner_ctx.drawImage(backarrow, backarrow_src_xl, backarrow_src_xl,
-                             backarrow_src_w, backarrow_src_h,
-                             backarrow_banner_xl, backarrow_banner_yl,
-                             backarrow_banner_w, backarrow_banner_h);
-      banner_ctx.drawImage(faq_person, 0, 0, 510, 425, banner_canvas.width * 0.75,
-                           banner_canvas.width*0.0135, banner_canvas.width*0.175, banner_canvas.width*0.145);
-    break;
+      banner_ctx.drawImage(
+        uparrow,
+        uparrow_src_xl,
+        uparrow_src_xl,
+        uparrow_src_w,
+        uparrow_src_h,
+        uparrow_banner_xl,
+        uparrow_banner_yl,
+        uparrow_banner_w,
+        uparrow_banner_h
+      );
+      banner_ctx.drawImage(
+        downarrow,
+        downarrow_src_xl,
+        downarrow_src_xl,
+        downarrow_src_w,
+        downarrow_src_h,
+        downarrow_banner_xl,
+        downarrow_banner_yl,
+        downarrow_banner_w,
+        downarrow_banner_h
+      );
+      banner_ctx.drawImage(
+        backarrow,
+        backarrow_src_xl,
+        backarrow_src_xl,
+        backarrow_src_w,
+        backarrow_src_h,
+        backarrow_banner_xl,
+        backarrow_banner_yl,
+        backarrow_banner_w,
+        backarrow_banner_h
+      );
+      banner_ctx.drawImage(
+        faq_person,
+        0,
+        0,
+        510,
+        425,
+        banner_canvas.width * 0.75,
+        banner_canvas.width * 0.0135,
+        banner_canvas.width * 0.175,
+        banner_canvas.width * 0.145
+      );
+      break;
     case "about":
-        draw_hdr(bctx, "ABOUT");
-        draw_text(bctx, abouttext, body_font);
-        banner_ctx.drawImage(uparrow, uparrow_src_xl, uparrow_src_xl,
-                             uparrow_src_w, uparrow_src_h,
-                             uparrow_banner_xl, uparrow_banner_yl,
-                             uparrow_banner_w, uparrow_banner_h);
-      banner_ctx.drawImage(downarrow, downarrow_src_xl, downarrow_src_xl,
-                           downarrow_src_w, downarrow_src_h,
-                           downarrow_banner_xl, downarrow_banner_yl,
-                           downarrow_banner_w, downarrow_banner_h);
-        banner_ctx.drawImage(backarrow, backarrow_src_xl, backarrow_src_xl,
-                             backarrow_src_w, backarrow_src_h,
-                             backarrow_banner_xl, backarrow_banner_yl,
-                             backarrow_banner_w, backarrow_banner_h);
-        banner_ctx.drawImage(about_person, 0, 0, 564, 435,
-                             banner_canvas.width * 0.77,banner_canvas.width*0.0135,
-                             banner_canvas.width*0.175, banner_canvas.width*0.145);
-    break;
+      draw_hdr(bctx, "ABOUT");
+      draw_text(bctx, abouttext, body_font);
+      banner_ctx.drawImage(
+        uparrow,
+        uparrow_src_xl,
+        uparrow_src_xl,
+        uparrow_src_w,
+        uparrow_src_h,
+        uparrow_banner_xl,
+        uparrow_banner_yl,
+        uparrow_banner_w,
+        uparrow_banner_h
+      );
+      banner_ctx.drawImage(
+        downarrow,
+        downarrow_src_xl,
+        downarrow_src_xl,
+        downarrow_src_w,
+        downarrow_src_h,
+        downarrow_banner_xl,
+        downarrow_banner_yl,
+        downarrow_banner_w,
+        downarrow_banner_h
+      );
+      banner_ctx.drawImage(
+        backarrow,
+        backarrow_src_xl,
+        backarrow_src_xl,
+        backarrow_src_w,
+        backarrow_src_h,
+        backarrow_banner_xl,
+        backarrow_banner_yl,
+        backarrow_banner_w,
+        backarrow_banner_h
+      );
+      banner_ctx.drawImage(
+        about_person,
+        0,
+        0,
+        564,
+        435,
+        banner_canvas.width * 0.77,
+        banner_canvas.width * 0.0135,
+        banner_canvas.width * 0.175,
+        banner_canvas.width * 0.145
+      );
+      break;
     case "registration":
-        draw_hdr(bctx, "REGISTRATION");
-        draw_text(bctx, registrationtxt, body_font);
-        banner_ctx.drawImage(backarrow, backarrow_src_xl, backarrow_src_xl,
-                             backarrow_src_w, backarrow_src_h,
-                             backarrow_banner_xl, backarrow_banner_yl,
-                             backarrow_banner_w, backarrow_banner_h);
-        banner_ctx.drawImage(registration_person, 0, 0, 501, 435,
-                             banner_canvas.width * 0.75, banner_canvas.width*0.0135,
-                             banner_canvas.width*0.175, banner_canvas.width*0.145);
-    break;
+      draw_hdr(bctx, "REGISTRATION");
+      draw_text(bctx, registrationtxt, body_font);
+      banner_ctx.drawImage(
+        backarrow,
+        backarrow_src_xl,
+        backarrow_src_xl,
+        backarrow_src_w,
+        backarrow_src_h,
+        backarrow_banner_xl,
+        backarrow_banner_yl,
+        backarrow_banner_w,
+        backarrow_banner_h
+      );
+      banner_ctx.drawImage(
+        registration_person,
+        0,
+        0,
+        501,
+        435,
+        banner_canvas.width * 0.75,
+        banner_canvas.width * 0.0135,
+        banner_canvas.width * 0.175,
+        banner_canvas.width * 0.145
+      );
+      break;
     default:
-    break;
+      break;
   }
 }
 
-
-function dist(x, y, x2, y2){
-  return Math.sqrt((x-x2)*(x-x2) + (y-y2)*(y-y2))
+function dist(x, y, x2, y2) {
+  return Math.sqrt((x - x2) * (x - x2) + (y - y2) * (y - y2));
 }
 
-
-function draw_schedule_txt(day1, day2){
-  drape_ctx.fillStyle = "#006699"
+function draw_schedule_txt(day1, day2) {
+  drape_ctx.fillStyle = "#006699";
   drape_ctx.font = "150px silkscreen";
-  drape_ctx.fillText("Schedule", 500 * drape_scale,
-                     120 * drape_scale);
-  
-//   /* BEGIN TMP */
-//   drape_ctx.fillStyle = "#000000"
-//   drape_ctx.font = "105px silkscreen";
-//   drape_ctx.fillText("Coming Soon", 490 * drape_scale,
-//                      200 * drape_scale);
-//   /* END TMP */
-  tile_pos_x = canvas.width/2 - 136;
-  tile_pos_y = canvas.height/2 - 255;
+  drape_ctx.fillText("Schedule", 500 * drape_scale, 120 * drape_scale);
+
+  //   /* BEGIN TMP */
+  //   drape_ctx.fillStyle = "#000000"
+  //   drape_ctx.font = "105px silkscreen";
+  //   drape_ctx.fillText("Coming Soon", 490 * drape_scale,
+  //                      200 * drape_scale);
+  //   /* END TMP */
+  tile_pos_x = canvas.width / 2 - 136;
+  tile_pos_y = canvas.height / 2 - 255;
   drape_ctx.font = "105px silkscreen";
-  drape_ctx.fillText("saturday, february 15",  tile_pos_x - 220, tile_pos_y + 400);
+  drape_ctx.fillText(
+    "saturday, february 15",
+    tile_pos_x - 220,
+    tile_pos_y + 400
+  );
 
   drape_ctx.font = "105px silkscreen";
-  drape_ctx.fillText("Sunday, february 16",  tile_pos_x + 1420, tile_pos_y + 400);
+  drape_ctx.fillText(
+    "Sunday, february 16",
+    tile_pos_x + 1420,
+    tile_pos_y + 400
+  );
 
-  drape_ctx.fillStyle = "#000000"
+  drape_ctx.fillStyle = "#000000";
   drape_ctx.font = "75px silkscreen";
   let offset = 0;
-  for(var i = 0; i < day1.length; i ++){
-    line = day1[i].split('|');
+  for (var i = 0; i < day1.length; i++) {
+    line = day1[i].split("|");
     if (line.length == 2) {
-      drape_ctx.fillText(line[0], tile_pos_x - 220, tile_pos_y + 425 + (75 * (i+ offset +1))); 
-      drape_ctx.fillText(line[1], tile_pos_x + 20, tile_pos_y + 425 + (75 * (i+ offset +1)));
-    }
-    else {
-      drape_ctx.fillText(line[0], tile_pos_x + 240, tile_pos_y + 425 + (75 * (i+ offset +1)));
+      drape_ctx.fillText(
+        line[0],
+        tile_pos_x - 220,
+        tile_pos_y + 425 + 75 * (i + offset + 1)
+      );
+      drape_ctx.fillText(
+        line[1],
+        tile_pos_x + 20,
+        tile_pos_y + 425 + 75 * (i + offset + 1)
+      );
+    } else {
+      drape_ctx.fillText(
+        line[0],
+        tile_pos_x + 240,
+        tile_pos_y + 425 + 75 * (i + offset + 1)
+      );
     }
   }
 
-  for(var i = 0; i < day2.length; i ++){
-    line = day2[i].split('|');
-    drape_ctx.fillText(line[0], tile_pos_x + 1420, tile_pos_y + 425 + (75 * (i+1)));
-    drape_ctx.fillText(line[1], tile_pos_x + 1660, tile_pos_y + 425 + (75 * (i+1)));
+  for (var i = 0; i < day2.length; i++) {
+    line = day2[i].split("|");
+    drape_ctx.fillText(
+      line[0],
+      tile_pos_x + 1420,
+      tile_pos_y + 425 + 75 * (i + 1)
+    );
+    drape_ctx.fillText(
+      line[1],
+      tile_pos_x + 1660,
+      tile_pos_y + 425 + 75 * (i + 1)
+    );
   }
-  drape_ctx.drawImage(schedule_person, 0, 0, 500, 435, canvas.width * 2.2, canvas.width*1.1, canvas.width*0.325, canvas.width*0.3)
+  drape_ctx.drawImage(
+    schedule_person,
+    0,
+    0,
+    500,
+    435,
+    canvas.width * 2.2,
+    canvas.width * 1.1,
+    canvas.width * 0.325,
+    canvas.width * 0.3
+  );
 }
 
-function draw_help_txt(help_txt){
-  drape_ctx.fillStyle = "#006699"
+function draw_help_txt(help_txt) {
+  drape_ctx.fillStyle = "#006699";
   drape_ctx.font = "150px silkscreen";
   drape_ctx.fillText("Help", 558 * drape_scale, 105 * drape_scale);
-  drape_ctx.fillStyle = "#000000"
+  drape_ctx.fillStyle = "#000000";
   drape_ctx.font = "90px silkscreen";
-  for(var i = 0; i < help_txt.length; i ++){
-      drape_ctx.fillText(help_txt[i], 380 * drape_scale,
-                         (105 + (50 * (i +1))) * drape_scale); 
+  for (var i = 0; i < help_txt.length; i++) {
+    drape_ctx.fillText(
+      help_txt[i],
+      380 * drape_scale,
+      (105 + 50 * (i + 1)) * drape_scale
+    );
   }
 }
 
-function draw_text(bctx, txt, font){
-    bctx.font = font;
-    bctx.fillStyle = "#000000";
-    txt.update_blocks();
-    for(var i = 0; i < txt.lines; i ++){
-        if(txt.cblock + i < txt.blocks.length){
-            bctx.fillText(txt.blocks[txt.cblock+i], txt.width*0.06, txt.font_size*(i+2));
-        }
+function draw_text(bctx, txt, font) {
+  bctx.font = font;
+  bctx.fillStyle = "#000000";
+  txt.update_blocks();
+  for (var i = 0; i < txt.lines; i++) {
+    if (txt.cblock + i < txt.blocks.length) {
+      bctx.fillText(
+        txt.blocks[txt.cblock + i],
+        txt.width * 0.06,
+        txt.font_size * (i + 2)
+      );
     }
+  }
 }
 
-function draw_hdr(bctx, hdr){
+function draw_hdr(bctx, hdr) {
   bctx.font = "90px Oswald";
-  bctx.fillStyle = "#006699"
+  bctx.fillStyle = "#006699";
   bctx.fillText(hdr, 233, 163);
 }
 
 /*
  * draw_drape
  */
-function draw_drape(width_scale = 1, start_coord_coeff = 1, backarrow_shift = 0, schedule_shift = 0) {
-    drape_canvas.setAttribute("style", "display: block;");
-    drape_ctx.drawImage(schedule, 0, 0, 600, 800,
-                        Math.round(370/start_coord_coeff) * drape_scale, (20 + schedule_shift) * drape_scale,
-                        500 * drape_scale * width_scale, (680 - Math.round(3*schedule_shift)) * drape_scale);
-    drape_ctx.drawImage(backarrow, 0, 0, 100, 100,
-                        380 * drape_scale, (35 + backarrow_shift) * drape_scale,
-                        35 * drape_scale, 35 * drape_scale);
+function draw_drape(
+  width_scale = 1,
+  start_coord_coeff = 1,
+  backarrow_shift = 0,
+  schedule_shift = 0
+) {
+  drape_canvas.setAttribute("style", "display: block;");
+  drape_ctx.drawImage(
+    schedule,
+    0,
+    0,
+    600,
+    800,
+    Math.round(370 / start_coord_coeff) * drape_scale,
+    (20 + schedule_shift) * drape_scale,
+    500 * drape_scale * width_scale,
+    (680 - Math.round(3 * schedule_shift)) * drape_scale
+  );
+  drape_ctx.drawImage(
+    backarrow,
+    0,
+    0,
+    100,
+    100,
+    380 * drape_scale,
+    (35 + backarrow_shift) * drape_scale,
+    35 * drape_scale,
+    35 * drape_scale
+  );
 }
-
 
 /*
  * clear_drape
  */
 function clear_drape() {
-    drape_ctx.clearRect(0, 0, drape_canvas.width, drape_canvas.height);
-    drape_canvas.setAttribute("style", "display: none;");
+  drape_ctx.clearRect(0, 0, drape_canvas.width, drape_canvas.height);
+  drape_canvas.setAttribute("style", "display: none;");
 }
-
 
 /*
  * draw_sponsors - Draw the sponsors.
  */
 function draw_sponsors() {
-    drape_ctx.fillStyle = "#006699";
-    drape_ctx.font = "150px silkscreen";
-    drape_ctx.fillText("Sponsors", 490 * drape_scale, 70 * drape_scale);
+  drape_ctx.fillStyle = "#006699";
+  drape_ctx.font = "150px silkscreen";
+  drape_ctx.fillText("Sponsors", 490 * drape_scale, 70 * drape_scale);
 
-    drape_ctx.drawImage(gs, 0, 0, 785, 338,
-                        420 * drape_scale, 100 * drape_scale,
-                        165 * drape_scale, 75 * drape_scale);
-    drape_ctx.drawImage(peak6, 0, 0, 800, 156,
-                        670 * drape_scale, 110 * drape_scale,
-                        150 * drape_scale, 30 * drape_scale);
-    drape_ctx.drawImage(imc, 0, 0, 396, 72,
-                        520 * drape_scale, 200 * drape_scale,
-                        206.25 * drape_scale, 37.5 * drape_scale);
+  drape_ctx.drawImage(
+    gs,
+    0,
+    0,
+    785,
+    338,
+    420 * drape_scale,
+    100 * drape_scale,
+    165 * drape_scale,
+    75 * drape_scale
+  );
+  drape_ctx.drawImage(
+    peak6,
+    0,
+    0,
+    800,
+    156,
+    670 * drape_scale,
+    110 * drape_scale,
+    150 * drape_scale,
+    30 * drape_scale
+  );
+  drape_ctx.drawImage(
+    imc,
+    0,
+    0,
+    396,
+    72,
+    520 * drape_scale,
+    200 * drape_scale,
+    206.25 * drape_scale,
+    37.5 * drape_scale
+  );
 
-    drape_ctx.drawImage(belvedere, 0, 0, 2730, 1780,
-                        420 * drape_scale, 285 * drape_scale,
-                        (2730/18) * drape_scale, (1780/18) * drape_scale);
-    drape_ctx.drawImage(cdac, 0, 0, 1511, 1363,
-                        670 * drape_scale, 270 * drape_scale,
-                        (1511/11) * drape_scale, (1363/11) * drape_scale);
-    drape_ctx.drawImage(flt, 0, 0, 1090, 116,
-                        520 * drape_scale, 430 * drape_scale,
-                        212.5 * drape_scale, 22.6 * drape_scale);
+  drape_ctx.drawImage(
+    belvedere,
+    0,
+    0,
+    2730,
+    1780,
+    420 * drape_scale,
+    285 * drape_scale,
+    (2730 / 18) * drape_scale,
+    (1780 / 18) * drape_scale
+  );
+  drape_ctx.drawImage(
+    cdac,
+    0,
+    0,
+    1511,
+    1363,
+    670 * drape_scale,
+    270 * drape_scale,
+    (1511 / 11) * drape_scale,
+    (1363 / 11) * drape_scale
+  );
+  drape_ctx.drawImage(
+    flt,
+    0,
+    0,
+    1090,
+    116,
+    520 * drape_scale,
+    430 * drape_scale,
+    212.5 * drape_scale,
+    22.6 * drape_scale
+  );
 
-    drape_ctx.drawImage(pathrise, 0, 0, 4056, 1017,
-                        540 * drape_scale, 600 * drape_scale,
-                        (4056/24) * drape_scale, (1017/24) * drape_scale);
-    drape_ctx.drawImage(n26, 0, 0, 1200, 817,
-                        460 * drape_scale, 510 * drape_scale,
-                        (1200/14) * drape_scale, (817/14) * drape_scale);
-    drape_ctx.drawImage(smule, 0, 0, 2400, 1397,
-                        690 * drape_scale, 500 * drape_scale,
-                        (2400/20) * drape_scale, (1397/20) * drape_scale);
+  drape_ctx.drawImage(
+    pathrise,
+    0,
+    0,
+    4056,
+    1017,
+    540 * drape_scale,
+    600 * drape_scale,
+    (4056 / 24) * drape_scale,
+    (1017 / 24) * drape_scale
+  );
+  drape_ctx.drawImage(
+    n26,
+    0,
+    0,
+    1200,
+    817,
+    460 * drape_scale,
+    510 * drape_scale,
+    (1200 / 14) * drape_scale,
+    (817 / 14) * drape_scale
+  );
+  drape_ctx.drawImage(
+    smule,
+    0,
+    0,
+    2400,
+    1397,
+    690 * drape_scale,
+    500 * drape_scale,
+    (2400 / 20) * drape_scale,
+    (1397 / 20) * drape_scale
+  );
 }
 
 /*
  * interaction_update - this function is called in gameLoop
  * to do all of the checks for the interaction functionalities.
- * 
+ *
  * Arguments: none
  *
  * Returns: none
  */
-function interaction_update(){
-    if (dist(positionX, positionY, 135, 340) < 45) {
-        if (banner_state === "faq_answers");
-        else if (!(banner_exit === "faq_questions")) {
-            banner_state = "faq_questions";
-            baner_exit = "empty";
-        }
-        else {
-            banner_state = "empty";
-        }
+function interaction_update() {
+  if (dist(positionX, positionY, 135, 340) < 45) {
+    if (banner_state === "faq_answers");
+    else if (!(banner_exit === "faq_questions")) {
+      banner_state = "faq_questions";
+      baner_exit = "empty";
+    } else {
+      banner_state = "empty";
     }
-    else if (dist(positionX, positionY, 490, 220) < 45) {
-        if (!(banner_exit === "registration")) {
-            banner_state = "registration";
-            banner_exit = "empty";
-        }
-        else {
-            banner_state = "empty";
-        }
+  } else if (dist(positionX, positionY, 490, 220) < 45) {
+    if (!(banner_exit === "registration")) {
+      banner_state = "registration";
+      banner_exit = "empty";
+    } else {
+      banner_state = "empty";
     }
-    else if (dist(positionX, positionY, 1000, 510) < 45) {
-        if (!(banner_exit === "about")) {
-            banner_state = "about";
-            banner_exit = "empty";
-        }
-        else {
-            banner_state = "empty";
-        }
+  } else if (dist(positionX, positionY, 1000, 510) < 45) {
+    if (!(banner_exit === "about")) {
+      banner_state = "about";
+      banner_exit = "empty";
+    } else {
+      banner_state = "empty";
     }
-    else if (dist(positionX, positionY, 615, 567) < 45) {
-        banner_state = "empty";
-        banner_exit = "empty";
-        if (!schedule_state && !schedule_clear) {
-            activate_schedule_state();
-        }
+  } else if (dist(positionX, positionY, 615, 567) < 45) {
+    banner_state = "empty";
+    banner_exit = "empty";
+    if (!schedule_state && !schedule_clear) {
+      activate_schedule_state();
     }
-    else if (dist(positionX, positionY, 1115, 255) < 45) {
-        banner_state = "empty";
-        banner_exit = "empty";
-        if (!sponsors_state && !sponsors_clear) {
-            activate_sponsors_state();
-        }
+  } else if (dist(positionX, positionY, 1115, 255) < 45) {
+    banner_state = "empty";
+    banner_exit = "empty";
+    if (!sponsors_state && !sponsors_clear) {
+      activate_sponsors_state();
     }
-    else {
-        banner_state = "empty";
-        banner_exit = "empty";
-        if (schedule_state) {
-            deactivate_schedule_state();
-        }
-        else if (schedule_clear) {
-            schedule_clear = false;
-        }
-        else if (sponsors_state) {
-            deactivate_sponsors_state();
-        }
-        else if (sponsors_clear) {
-            sponsors_clear = false;
-        }
+  } else {
+    banner_state = "empty";
+    banner_exit = "empty";
+    if (schedule_state) {
+      deactivate_schedule_state();
+    } else if (schedule_clear) {
+      schedule_clear = false;
+    } else if (sponsors_state) {
+      deactivate_sponsors_state();
+    } else if (sponsors_clear) {
+      sponsors_clear = false;
     }
-    
-    if (banner_state != prev_banner_state || redraw_banner) {
-        if(banner_state === "empty") {
-            banner_canvas.style.display = "none";
-            banner_ctx.clearRect(0, 0, banner_canvas.width, banner_canvas.height);
-        }
-        else {
-            banner_canvas.style.display = "block";
-            draw_banner(banner_canvas, banner_ctx, banner_state);
-        }
-        prev_banner_state = banner_state;
-        redraw_banner = false;
-    }
-}
+  }
 
+  if (banner_state != prev_banner_state || redraw_banner) {
+    if (banner_state === "empty") {
+      banner_canvas.style.display = "none";
+      banner_ctx.clearRect(0, 0, banner_canvas.width, banner_canvas.height);
+    } else {
+      banner_canvas.style.display = "block";
+      draw_banner(banner_canvas, banner_ctx, banner_state);
+    }
+    prev_banner_state = banner_state;
+    redraw_banner = false;
+  }
+}
 
 function rect_contains(rect, x, y) {
-    var xl = rect[0];
-    var xh = rect[1];
-    var yl = rect[2];
-    var yh = rect[3];
-    var ret = false;
+  var xl = rect[0];
+  var xh = rect[1];
+  var yl = rect[2];
+  var yh = rect[3];
+  var ret = false;
 
-    if (xl <= x && x <= xh && yl <= y && y <= yh) {
-        ret = true;
-    }
+  if (xl <= x && x <= xh && yl <= y && y <= yh) {
+    ret = true;
+  }
 
-    return ret;
+  return ret;
 }
-
 
 /*
  * teleport_text_action - Increase the size of the
  * teleport texts on mousemove.
  */
 function teleport_text_action(x, y) {
-    if (rect_contains(TELEPORT_BOXES[0], x, y)) {
-        faq_header_text.setAttribute("style", "font-size: 2.8vw; left: 15.5vw; top: 17vw;");
-        header_text_changed = true;
-    }
-    else if (rect_contains(TELEPORT_BOXES[1], x, y)) {
-        register_header_text.setAttribute("style", "font-size: 2.8vw; left: 26.2vw; top: 2.0vw;");
-        header_text_changed = true;
-    }
-    else if (rect_contains(TELEPORT_BOXES[2], x, y)) {
-        schedule_header_text.setAttribute("style", "font-size: 2.8vw; left: 41.5vw; top: 34.2vw;");
-        header_text_changed = true;
-    }
-    else if (rect_contains(TELEPORT_BOXES[3], x, y)) {
-        about_header_text.setAttribute("style", "font-size: 2.8vw; right: 8.7vw; top: 29.5vw;");
-        header_text_changed = true;
-    }
-    else if (rect_contains(TELEPORT_BOXES[4], x, y)) {
-        sponsors_header_text.setAttribute("style", "font-size: 2.8vw; right: -0.5vw; top: 11.5vw;");
-        header_text_changed = true;
-    }
-    else if (header_text_changed) {
-        faq_header_text.setAttribute("style", "font-size: 2.2vw; left: 16vw; top: 17.7vw;");
-        register_header_text.setAttribute("style", "font-size: 2.2vw; left: 27.5vw; top: 2.6vw;");
-        schedule_header_text.setAttribute("style", "font-size: 2.2vw; left: 42.8vw; top: 34.9vw;");
-        about_header_text.setAttribute("style", "font-size: 2.2vw; right: 9.7vw; top: 30vw;");
-        sponsors_header_text.setAttribute("style", "font-size: 2.2vw; right: 1vw; top: 12vw;");
-        header_text_changed = false;
-    }
+  if (rect_contains(TELEPORT_BOXES[0], x, y)) {
+    faq_header_text.setAttribute(
+      "style",
+      "font-size: 2.8vw; left: 15.5vw; top: 17vw;"
+    );
+    header_text_changed = true;
+  } else if (rect_contains(TELEPORT_BOXES[1], x, y)) {
+    register_header_text.setAttribute(
+      "style",
+      "font-size: 2.8vw; left: 26.2vw; top: 2.0vw;"
+    );
+    header_text_changed = true;
+  } else if (rect_contains(TELEPORT_BOXES[2], x, y)) {
+    schedule_header_text.setAttribute(
+      "style",
+      "font-size: 2.8vw; left: 41.5vw; top: 34.2vw;"
+    );
+    header_text_changed = true;
+  } else if (rect_contains(TELEPORT_BOXES[3], x, y)) {
+    about_header_text.setAttribute(
+      "style",
+      "font-size: 2.8vw; right: 8.7vw; top: 29.5vw;"
+    );
+    header_text_changed = true;
+  } else if (rect_contains(TELEPORT_BOXES[4], x, y)) {
+    sponsors_header_text.setAttribute(
+      "style",
+      "font-size: 2.8vw; right: -0.5vw; top: 11.5vw;"
+    );
+    header_text_changed = true;
+  } else if (header_text_changed) {
+    faq_header_text.setAttribute(
+      "style",
+      "font-size: 2.2vw; left: 16vw; top: 17.7vw;"
+    );
+    register_header_text.setAttribute(
+      "style",
+      "font-size: 2.2vw; left: 27.5vw; top: 2.6vw;"
+    );
+    schedule_header_text.setAttribute(
+      "style",
+      "font-size: 2.2vw; left: 42.8vw; top: 34.9vw;"
+    );
+    about_header_text.setAttribute(
+      "style",
+      "font-size: 2.2vw; right: 9.7vw; top: 30vw;"
+    );
+    sponsors_header_text.setAttribute(
+      "style",
+      "font-size: 2.2vw; right: 1vw; top: 12vw;"
+    );
+    header_text_changed = false;
+  }
 }
-
 
 /*
  * activate_schedule_state - Activate schedule text.
  */
 function activate_schedule_state() {
-    draw_drape(2.25, 5.25, 50, 40);
-    draw_schedule_txt(schedule_txt_day1,
-                      schedule_txt_day2);
-    schedule_state = true;
-    schedule_clear = false;
+  draw_drape(2.25, 5.25, 50, 40);
+  draw_schedule_txt(schedule_txt_day1, schedule_txt_day2);
+  schedule_state = true;
+  schedule_clear = false;
 }
-
 
 /*
  * deactivate_schedule_state - Deactivate schedule text.
  */
 function deactivate_schedule_state() {
-    clear_drape();
-    schedule_state = false;
-    schedule_clear = false;
+  clear_drape();
+  schedule_state = false;
+  schedule_clear = false;
 }
-
 
 /*
  * help_activate - Activate help text.
  */
 function activate_help_state() {
-    help_state = true;
-    draw_drape();
-    draw_help_txt(help_txt);
+  help_state = true;
+  draw_drape();
+  draw_help_txt(help_txt);
 }
-
 
 /*
  * help_deactivate - Deactivate help text.
  */
 function deactivate_help_state() {
-    help_state = false;
-    clear_drape();
+  help_state = false;
+  clear_drape();
 }
 
 /*
  * activate_sponsors_state - activate sponors image
  */
 function activate_sponsors_state() {
-    sponsors_state = true;
-    draw_drape();
-    draw_sponsors();
+  sponsors_state = true;
+  draw_drape();
+  draw_sponsors();
 }
-
 
 /*
  * deactivate_sponsors_state
  */
 function deactivate_sponsors_state() {
-    sponsors_state = false;
-    clear_drape();
+  sponsors_state = false;
+  clear_drape();
 }
-
 
 /** EVENT HANDLERS **/
 
@@ -904,8 +1130,8 @@ function bannerClickEventHandler(event) {
   var store_positionX = positionX;
   var store_positionY = positionY;
 
-  if(positionX != store_positionX || positionY != store_positionY){
-      banner_state = "empty";
+  if (positionX != store_positionX || positionY != store_positionY) {
+    banner_state = "empty";
   }
   banner_click(event);
   interaction_update();
@@ -914,7 +1140,7 @@ function bannerClickEventHandler(event) {
 
 /*
  *  sketchpadClickEventHandler - Handle the click event for the canvas.
- * 
+ *
  * Arguments:
  * event :: event - The event in question.
  *
@@ -922,105 +1148,89 @@ function bannerClickEventHandler(event) {
  */
 function sketchpadClickEventHandler(event) {
   var rect = canvas.getBoundingClientRect(); // abs. size of element
-  var scaleX = canvas.width / rect.width;  // relationship bitmap vs. element for X
-  var scaleY = canvas.height / rect.height;  // relationship bitmap vs. element for Y
-  var x = (event.clientX - rect.left) * scaleX;   // scale mouse coordinates after they have
-  var y = (event.clientY - rect.top) * scaleY; 
-  
+  var scaleX = canvas.width / rect.width; // relationship bitmap vs. element for X
+  var scaleY = canvas.height / rect.height; // relationship bitmap vs. element for Y
+  var x = (event.clientX - rect.left) * scaleX; // scale mouse coordinates after they have
+  var y = (event.clientY - rect.top) * scaleY;
+
   if (rect_contains(HELP_BUTTON_RECT, x, y)) {
-      activate_help_state();
-  }
-  else {
-      teleport(event);
+    activate_help_state();
+  } else {
+    teleport(event);
   }
 
   /* Prevent the click from going to deeper DOM elements. */
   event.stopPropagation();
 }
-
 
 /*
  * drapeClickEventHandler
  */
 function drapeClickEventHandler(event) {
   var rect = canvas.getBoundingClientRect(); // abs. size of element
-  var scaleX = canvas.width / rect.width;  // relationship bitmap vs. element for X
-  var scaleY = canvas.height / rect.height;  // relationship bitmap vs. element for Y
-  var x = (event.clientX - rect.left) * scaleX;   // scale mouse coordinates after they have
+  var scaleX = canvas.width / rect.width; // relationship bitmap vs. element for X
+  var scaleY = canvas.height / rect.height; // relationship bitmap vs. element for Y
+  var x = (event.clientX - rect.left) * scaleX; // scale mouse coordinates after they have
   var y = (event.clientY - rect.top) * scaleY;
   console.log("cx " + x + " cy " + y);
   if (help_state) {
-      if (rect_contains(DRAPE_EXIT_RECT, x, y)) {
-          deactivate_help_state();
-      }
-  }
-  else if (schedule_state) {
-      if (rect_contains(SCHED_EXIT_RECT, x, y)) {
-          deactivate_schedule_state();
-          schedule_clear = true;
-      }
-  }
-  else if (sponsors_state) {
-      if (rect_contains(DRAPE_EXIT_RECT, x, y)) {
-          deactivate_sponsors_state();
-          sponsors_clear = true;
-      }
-      else if (rect_contains(belvedere_rect, x, y)) {
-          window.open(belvedere_url);
-      }
-      else if (rect_contains(cdac_rect, x, y)) {
-          window.open(cdac_url);
-      }
-      else if (rect_contains(gs_rect, x, y)) {
-          window.open(gs_url);
-      }
-      else if (rect_contains(imc_rect, x, y)) {
-          window.open(imc_url);
-      }
-      else if (rect_contains(n26_rect, x, y)) {
-          console.log("n26");
-          window.open(n26_url);
-      }
-      else if (rect_contains(pathrise_rect, x, y)) {
-          window.open(pathrise_url);
-      }
-      else if (rect_contains(peak6_rect, x, y)) {
-          window.open(peak6_url);
-      }
-      else if (rect_contains(flt_rect, x, y)) {
-          window.open(flt_url);
-      }
-      else if (rect_contains(smule_rect, x, y)) {
-          window.open(smule_url);
-      }
+    if (rect_contains(DRAPE_EXIT_RECT, x, y)) {
+      deactivate_help_state();
+    }
+  } else if (schedule_state) {
+    if (rect_contains(SCHED_EXIT_RECT, x, y)) {
+      deactivate_schedule_state();
+      schedule_clear = true;
+    }
+  } else if (sponsors_state) {
+    if (rect_contains(DRAPE_EXIT_RECT, x, y)) {
+      deactivate_sponsors_state();
+      sponsors_clear = true;
+    } else if (rect_contains(belvedere_rect, x, y)) {
+      window.open(belvedere_url);
+    } else if (rect_contains(cdac_rect, x, y)) {
+      window.open(cdac_url);
+    } else if (rect_contains(gs_rect, x, y)) {
+      window.open(gs_url);
+    } else if (rect_contains(imc_rect, x, y)) {
+      window.open(imc_url);
+    } else if (rect_contains(n26_rect, x, y)) {
+      console.log("n26");
+      window.open(n26_url);
+    } else if (rect_contains(pathrise_rect, x, y)) {
+      window.open(pathrise_url);
+    } else if (rect_contains(peak6_rect, x, y)) {
+      window.open(peak6_url);
+    } else if (rect_contains(flt_rect, x, y)) {
+      window.open(flt_url);
+    } else if (rect_contains(smule_rect, x, y)) {
+      window.open(smule_url);
+    }
   }
 
   /* Prevent the click from going to deeper DOM elements. */
   event.stopPropagation();
 }
 
-
 /*
  * sketchpadMouseMoveEventHandler - Execute this
  * handler when the mouse is on the sketchpad.
  */
 function sketchpadMouseMoveEventHandler(event) {
-    /* Get coordinates. */
-    var rect = canvas.getBoundingClientRect();
-    var scaleX = canvas.width / rect.width;
-    var scaleY = canvas.height / rect.height;
-    var x = (event.clientX - rect.left) * scaleX;
-    var y = (event.clientY - rect.top) * scaleY;
+  /* Get coordinates. */
+  var rect = canvas.getBoundingClientRect();
+  var scaleX = canvas.width / rect.width;
+  var scaleY = canvas.height / rect.height;
+  var x = (event.clientX - rect.left) * scaleX;
+  var y = (event.clientY - rect.top) * scaleY;
 
-    /* Execute handlers. */
-    teleport_text_action(x, y);
+  /* Execute handlers. */
+  teleport_text_action(x, y);
 }
-
 
 function keyDownListener(event) {
   keyPresses[event.key] = true;
 }
-
 
 function keyUpListener(event) {
   keyPresses[event.key] = false;
@@ -1048,45 +1258,32 @@ function legalPosition(x, y) {
   var bbxh = 0;
   var bbyl = 0;
   var bbyh = 0;
-  
+
   /* Traverse all bounding boxes. Check that character extrema
    * are contained in at least one box. */
-  for(var i = 0; i < BOUNDING_BOXES.length; i++) {
-      bb = BOUNDING_BOXES[i];
-      bbxl = bb[0];
-      bbxh = bb[1];
-      bbyl = bb[2];
-      bbyh = bb[3];
-      
-      if (bbxl <= tlx
-          && tlx <= bbxh 
-          && bbyl <= tly
-          && tly <= bbyh) {
-          top_left_legal = true;
-      }
-      if (bbxl <= trx
-          && trx <= bbxh
-          && bbyl <= try_
-          && try_ <= bbyh) {
-          top_right_legal = true;
-      }
-      if (bbxl <= brx
-          && brx <= bbxh
-          && bbyl <= bry
-          && bry <= bbyh) {
-          bot_right_legal = true;
-      }
-      if (bbxl <= blx
-          && blx <= bbxh
-          && bbyl <= bly
-          && bly <= bbyh) {
-          bot_left_legal = true;
-      }
+  for (var i = 0; i < BOUNDING_BOXES.length; i++) {
+    bb = BOUNDING_BOXES[i];
+    bbxl = bb[0];
+    bbxh = bb[1];
+    bbyl = bb[2];
+    bbyh = bb[3];
+
+    if (bbxl <= tlx && tlx <= bbxh && bbyl <= tly && tly <= bbyh) {
+      top_left_legal = true;
+    }
+    if (bbxl <= trx && trx <= bbxh && bbyl <= try_ && try_ <= bbyh) {
+      top_right_legal = true;
+    }
+    if (bbxl <= brx && brx <= bbxh && bbyl <= bry && bry <= bbyh) {
+      bot_right_legal = true;
+    }
+    if (bbxl <= blx && blx <= bbxh && bbyl <= bly && bly <= bbyh) {
+      bot_left_legal = true;
+    }
   }
 
-  if (top_left_legal && top_right_legal
-      && bot_left_legal && bot_right_legal) {
-      legal = true;
+  if (top_left_legal && top_right_legal && bot_left_legal && bot_right_legal) {
+    legal = true;
   }
 
   return legal;
@@ -1094,7 +1291,7 @@ function legalPosition(x, y) {
 
 /*
  * clear_character - Remove the character from the canvas.
- * 
+ *
  * Arguments:
  * ctx :: CanvasRenderingContext2D - The canvas context associated
  *     with the character.
@@ -1102,10 +1299,13 @@ function legalPosition(x, y) {
  * Returns: none
  */
 function clear_character(ctx) {
-    ctx.clearRect(prevX - CLEAR_CHARACTER_DELTA_X, prevY - CLEAR_CHARACTER_DELTA_Y,
-                  CLEAR_CHARACTER_CANVAS_WIDTH, CLEAR_CHARACTER_CANVAS_HEIGHT);
+  ctx.clearRect(
+    prevX - CLEAR_CHARACTER_DELTA_X,
+    prevY - CLEAR_CHARACTER_DELTA_Y,
+    CLEAR_CHARACTER_CANVAS_WIDTH,
+    CLEAR_CHARACTER_CANVAS_HEIGHT
+  );
 }
-
 
 /*
  * draw_character - Put the character to the canvas.
@@ -1118,84 +1318,101 @@ function clear_character(ctx) {
  * character_frame_index_y :: int - Specifies the y offset in the character's
  *     svg file that corresponds to a unique position.
  */
-function draw_character(canvas_x, canvas_y, character_frame_index_x, character_frame_index_y) {
-    character_frame_x = character_frame_index_x * CHARACTER_FRAME_WIDTH;
-    character_frame_y = character_frame_index_y * CHARACTER_FRAME_HEIGHT;
-    ctx.drawImage(img, character_frame_x, character_frame_y, CHARACTER_FRAME_WIDTH, CHARACTER_FRAME_HEIGHT,
-                  canvas_x, canvas_y, CHARACTER_CANVAS_WIDTH, CHARACTER_CANVAS_HEIGHT);
+function draw_character(
+  canvas_x,
+  canvas_y,
+  character_frame_index_x,
+  character_frame_index_y
+) {
+  character_frame_x = character_frame_index_x * CHARACTER_FRAME_WIDTH;
+  character_frame_y = character_frame_index_y * CHARACTER_FRAME_HEIGHT;
+  ctx.drawImage(
+    img,
+    character_frame_x,
+    character_frame_y,
+    CHARACTER_FRAME_WIDTH,
+    CHARACTER_FRAME_HEIGHT,
+    canvas_x,
+    canvas_y,
+    CHARACTER_CANVAS_WIDTH,
+    CHARACTER_CANVAS_HEIGHT
+  );
 }
 
-
-function teleport(event){
-  var rect = canvas.getBoundingClientRect() // abs. size of element
-  var scaleX = canvas.width / rect.width  // relationship bitmap vs. element for X
-  var scaleY = canvas.height / rect.height  // relationship bitmap vs. element for Y
-  var x = (event.clientX - rect.left) * scaleX   // scale mouse coordinates after they have
-  var y = (event.clientY - rect.top) * scaleY 
+function teleport(event) {
+  var rect = canvas.getBoundingClientRect(); // abs. size of element
+  var scaleX = canvas.width / rect.width; // relationship bitmap vs. element for X
+  var scaleY = canvas.height / rect.height; // relationship bitmap vs. element for Y
+  var x = (event.clientX - rect.left) * scaleX; // scale mouse coordinates after they have
+  var y = (event.clientY - rect.top) * scaleY;
 
   /* Do teleport. */
-  for(i = 0; i < TELEPORT_BOXES.length; i++) {
+  for (i = 0; i < TELEPORT_BOXES.length; i++) {
     tpb = TELEPORT_BOXES[i];
     tpxl = tpb[0];
     tpxh = tpb[1];
     tpyl = tpb[2];
     tpyh = tpb[3];
-    if (tpxl <= x
-        && x <= tpxh
-        && tpyl <= y
-        && y <= tpyh) {
-        prevX = positionX;
-        prevY = positionY;
-        positionX = TELEPORT_COORDS[i][0];
-        positionY = TELEPORT_COORDS[i][1];
-        clear_character(ctx);
-        draw_character(positionX, positionY, CHARACTER_POSITIONS_LOOP[currentLoopIndex], currentDirection);
+    if (tpxl <= x && x <= tpxh && tpyl <= y && y <= tpyh) {
+      prevX = positionX;
+      prevY = positionY;
+      positionX = TELEPORT_COORDS[i][0];
+      positionY = TELEPORT_COORDS[i][1];
+      clear_character(ctx);
+      draw_character(
+        positionX,
+        positionY,
+        CHARACTER_POSITIONS_LOOP[currentLoopIndex],
+        currentDirection
+      );
     }
   }
-
-
 }
-
 
 function moveCharacter(deltaX, deltaY, direction) {
   if (!legalPosition(positionX + deltaX, positionY + deltaY)) {
     return;
   }
-  if (positionX + deltaX > 0 && positionX + CHARACTER_CANVAS_WIDTH + deltaX < canvas.width) {
-      prevX = positionX;
+  if (
+    positionX + deltaX > 0 &&
+    positionX + CHARACTER_CANVAS_WIDTH + deltaX < canvas.width
+  ) {
+    prevX = positionX;
     positionX += deltaX;
   }
-  if (positionY + deltaY > 0 && positionY + CHARACTER_CANVAS_HEIGHT + deltaY < canvas.height) {
-      prevY = positionY;
+  if (
+    positionY + deltaY > 0 &&
+    positionY + CHARACTER_CANVAS_HEIGHT + deltaY < canvas.height
+  ) {
+    prevY = positionY;
     positionY += deltaY;
   }
   currentDirection = direction;
 }
 
-
 /*
  * draw_path - This function draws all of the bounding paths to the canvas.
- * 
+ *
  * Arguments: none
- * 
+ *
  * Returns: none
  */
-function draw_path () {
+function draw_path() {
   BOUNDING_BOXES.forEach(([xMin, xMax, yMin, yMax]) => {
     ctx.beginPath();
     ctx.rect(xMin, yMin, xMax - xMin, yMax - yMin);
     ctx.stroke();
   });
   TELEPORT_BOXES.forEach(([xl, xh, yl, yh]) => {
-          ctx.beginPath();          
-          ctx.rect(xl, yl, xh - xl, yh - yl);
-          ctx.stroke();
-      });
+    ctx.beginPath();
+    ctx.rect(xl, yl, xh - xl, yh - yl);
+    ctx.stroke();
+  });
 }
 
 function character_update() {
   let hasMoved = false;
-  
+
   /* Update the character's position. */
   if (keyPresses.w) {
     moveCharacter(0, -MOVEMENT_SPEED, FACING_UP);
@@ -1214,7 +1431,7 @@ function character_update() {
     hasMoved = true;
   }
 
-  /* Update the leg movements of the character. */  
+  /* Update the leg movements of the character. */
   if (hasMoved) {
     redraw = true;
     frameCount++;
@@ -1225,27 +1442,29 @@ function character_update() {
         currentLoopIndex = 0;
       }
     }
+  } else {
+    /* If the character is idle its legs should be idle. */
+    if ((currentLoopIndex = 0)) {
+      redraw = false;
+    } else {
+      redraw = true;
+      currentLoopIndex = 0;
+    }
   }
-  /* If the character is idle its legs should be idle. */
-  else {
-      if (currentLoopIndex = 0) {
-          redraw = false;
-      }
-      else {
-        redraw = true;
-        currentLoopIndex = 0;
-      }
 
-  }
-  
   if (redraw) {
     clear_character(ctx);
-    draw_character(positionX, positionY, CHARACTER_POSITIONS_LOOP[currentLoopIndex], currentDirection);
+    draw_character(
+      positionX,
+      positionY,
+      CHARACTER_POSITIONS_LOOP[currentLoopIndex],
+      currentDirection
+    );
   }
 }
 
 /*
- * gameLoop - This function wraps gameLoop_ 
+ * gameLoop - This function wraps gameLoop_
  * so that gameLoop_ is updated every tick.
  */
 function gameLoop() {
@@ -1256,53 +1475,52 @@ function gameLoop() {
   interaction_update();
 
   /* Misc updates. */
-  if (DEBUG) {
+  if (1) {
     draw_path();
   }
-  
+
   /* Callback into this function. */
   window.requestAnimationFrame(gameLoop);
 }
 
-
 /* INITIALIZATION */
 
 function init() {
-    /* Do static loads. */
-    uparrow.src = './assets/up-03.svg';
-    downarrow.src = './assets/down-04.svg';
-    backarrow.src = './assets/back-02.svg';
-    bannerimg.src = './assets/box-05.svg';
-    faq_person.src = './assets/lighthouse_person_talk.png';
-    registration_person.src = './assets/mayor_talk.png';
-    about_person.src = './assets/resident_talk.png';
-    schedule_person.src = './assets/mapshop_person_talk.png';
-    schedule.src = 'assets/schedule.svg';
-    schedule_txt_day1 = SCHEDULE_TXT_DAY_1.split('\n');
-    schedule_txt_day2 = SCHEDULE_TXT_DAY_2.split('\n');
-    help.src = 'assets/help.svg';
-    help_txt = HELP_TXT.split('\n');
-    faqs.update_text(FAQ_INITIAL_TEXT);
-    abouttext.update_text(ABOUT_INITIAL_TEXT);
-    registrationtxt.update_text(REGISTRATION_TEXT);
+  /* Do static loads. */
+  uparrow.src = "./assets/up-03.svg";
+  downarrow.src = "./assets/down-04.svg";
+  backarrow.src = "./assets/back-02.svg";
+  bannerimg.src = "./assets/box-05.svg";
+  faq_person.src = "./assets/lighthouse_person_talk.png";
+  registration_person.src = "./assets/mayor_talk.png";
+  about_person.src = "./assets/resident_talk.png";
+  schedule_person.src = "./assets/mapshop_person_talk.png";
+  schedule.src = "assets/schedule.svg";
+  schedule_txt_day1 = SCHEDULE_TXT_DAY_1.split("\n");
+  schedule_txt_day2 = SCHEDULE_TXT_DAY_2.split("\n");
+  help.src = "assets/help.svg";
+  help_txt = HELP_TXT.split("\n");
+  faqs.update_text(FAQ_INITIAL_TEXT);
+  abouttext.update_text(ABOUT_INITIAL_TEXT);
+  registrationtxt.update_text(REGISTRATION_TEXT);
 
-    window.addEventListener("keydown", keyDownListener);
-    window.addEventListener("keyup", keyUpListener);
+  window.addEventListener("keydown", keyDownListener);
+  window.addEventListener("keyup", keyUpListener);
 
-    canvas.addEventListener("click", sketchpadClickEventHandler);
-    canvas.addEventListener("mousemove", sketchpadMouseMoveEventHandler);
+  canvas.addEventListener("click", sketchpadClickEventHandler);
+  canvas.addEventListener("mousemove", sketchpadMouseMoveEventHandler);
 
-    banner_canvas.setAttribute("style", "display: none;");
-    banner_canvas.addEventListener("click", bannerClickEventHandler);
-    banner_ctx.font = "120px Oswald";
+  banner_canvas.setAttribute("style", "display: none;");
+  banner_canvas.addEventListener("click", bannerClickEventHandler);
+  banner_ctx.font = "120px Oswald";
 
-    /* Initially drape is not displayed. */
-    drape_canvas.setAttribute("style", "display: none;");
-    drape_canvas.addEventListener("click", drapeClickEventHandler);
+  /* Initially drape is not displayed. */
+  drape_canvas.setAttribute("style", "display: none;");
+  drape_canvas.addEventListener("click", drapeClickEventHandler);
 
-    /* Load the background. Then enter the animation frame loop. */
-    img.src = 'assets/main.png'; 
-    img.onload = function() {
-        window.requestAnimationFrame(gameLoop);
-    };
+  /* Load the background. Then enter the animation frame loop. */
+  img.src = "assets/main.png";
+  img.onload = function () {
+    window.requestAnimationFrame(gameLoop);
+  };
 }

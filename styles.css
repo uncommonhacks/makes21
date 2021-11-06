@@ -5,7 +5,7 @@
 @font-face {
   font-family: "silkscreen";
   src: url("fonts/silkscreen.ttf") format("truetype");
-} 
+}
 
 @font-face {
   font-family: "open-sans-semibold";
@@ -30,11 +30,12 @@
   --mobile-height: 1020vw;
   /* If world-height is updated, update the media query
     * at bottom of file too. */
-  --world-height: 60vw; 
+  --world-height: 60vw;
 }
 
 /*** MOBILE **/
-html, body {
+html,
+body {
   margin: 0;
 }
 
@@ -48,7 +49,7 @@ a {
 }
 
 .desktop {
-  display: none;         
+  display: none;
 }
 
 .no-highlight {
@@ -66,7 +67,6 @@ a {
   width: 10vw;
   z-index: 11;
 }
-
 
 #mobile-container {
   height: var(--mobile-height);
@@ -94,7 +94,6 @@ a {
 .subblk {
   margin: 0;
 }
-
 
 /** MOBILE - LANDING **/
 
@@ -141,12 +140,11 @@ a {
   z-index: 1;
 }
 
-
 /** MOBILE - ABOUT **/
 
 #mobile-about-img1 {
   left: 0vw;
-  overflow: hidden;                    
+  overflow: hidden;
   position: absolute;
   top: var(--mobile-about-offset);
   width: 100vw;
@@ -155,7 +153,7 @@ a {
 
 #mobile-about-img2 {
   left: 10vw;
-  overflow: hidden;                    
+  overflow: hidden;
   position: absolute;
   top: calc(var(--mobile-about-offset) + 90vw);
   width: 8vw;
@@ -165,32 +163,31 @@ a {
 #mobile-about-txt1 {
   font-family: var(--header-font-family);
   color: var(--header-font-color);
-  font-size: var(--header-font-size);                   
+  font-size: var(--header-font-size);
   left: 12vw;
-  overflow: hidden;                    
+  overflow: hidden;
   position: absolute;
   top: calc(var(--mobile-about-offset) + 105vw);
   z-index: 1;
 }
 
 #mobile-about-txt2 {
-  color: var(--body-font-color);    
+  color: var(--body-font-color);
   font-family: var(--body-font-family);
-  font-size: 4vw;                   
+  font-size: 4vw;
   left: 16vw;
-  overflow: hidden;                    
+  overflow: hidden;
   position: absolute;
   top: calc(var(--mobile-about-offset) + 115vw);
   width: 70vw;
   z-index: 1;
 }
 
-
 /** MOBILE - FAQ **/
 
 #mobile-faq-img1 {
   left: 0vw;
-  overflow: hidden;                    
+  overflow: hidden;
   position: absolute;
   top: var(--mobile-faq-offset);
   width: 100vw;
@@ -199,7 +196,7 @@ a {
 
 #mobile-faq-img2 {
   left: 10vw;
-  overflow: hidden;                    
+  overflow: hidden;
   position: absolute;
   top: calc(var(--mobile-faq-offset) + 47vw);
   width: 8vw;
@@ -209,7 +206,7 @@ a {
 #mobile-faq-txt1 {
   color: var(--header-font-color);
   font-family: var(--header-font-family);
-  font-size: var(--header-font-size);                      
+  font-size: var(--header-font-size);
   left: 12vw;
   overflow: hidden;
   position: absolute;
@@ -220,7 +217,7 @@ a {
 #mobile-faq-blk1 {
   color: var(--body-font-color);
   font-family: var(--body-font-family);
-  font-size:4vw;                      
+  font-size: 4vw;
   height: 100vw;
   left: 10vw;
   overflow: auto;
@@ -230,12 +227,11 @@ a {
   z-index: 1;
 }
 
-
 /** MOBILE - SCHEDULE **/
 
 #mobile-schedule-img1 {
   left: 0vw;
-  overflow: hidden;                    
+  overflow: hidden;
   position: absolute;
   top: var(--mobile-schedule-offset);
   width: 100vw;
@@ -244,7 +240,7 @@ a {
 
 #mobile-schedule-img2 {
   left: 10vw;
-  overflow: hidden;                    
+  overflow: hidden;
   position: absolute;
   top: calc(var(--mobile-schedule-offset) + 70vw);
   width: 8vw;
@@ -252,9 +248,9 @@ a {
 }
 
 #mobile-schedule-txt1 {
-  color: var(--header-font-color);                      
+  color: var(--header-font-color);
   font-family: var(--header-font-family);
-  font-size: var(--header-font-size);                      
+  font-size: var(--header-font-size);
   left: 12vw;
   overflow: hidden;
   position: absolute;
@@ -265,13 +261,13 @@ a {
 #mobile-schedule-blk1 {
   color: var(--body-font-color);
   font-family: var(--body-font-family);
-  font-size: 3vw;                      
+  font-size: 3vw;
   height: 125vw;
   left: 10vw;
   overflow: auto;
   position: absolute;
   top: calc(var(--mobile-schedule-offset) + 100vw);
-  width: 80vw;                            
+  width: 80vw;
   z-index: 1;
 }
 
@@ -297,7 +293,7 @@ a {
   position: absolute;
   right: 27vw;
   top: calc(var(--mobile-sponsors-offset) + 26vw);
-  z-index: 1;     
+  z-index: 1;
 }
 
 #belvedere {
@@ -348,18 +344,17 @@ a {
   z-index: 1;
 }
 
-
-
 /*** DESKTOP ***/
 @media (min-device-width: 800px) and (min-width: 800px) {
-  html, body{
+  html,
+  body {
     margin: 0;
   }
 
   .desktop {
     display: initial;
   }
-  
+
   .mobile {
     display: none;
   }
@@ -412,23 +407,23 @@ a {
     z-index: 1;
   }
 
-  #sketchpad{
+  #sketchpad {
     margin: 0;
     position: absolute;
     width: 100vw;
     z-index: 9;
   }
-  
+
   #mlh-trust-badge {
-    display:block;
-    max-width:75px;
-    position:absolute;
+    display: block;
+    max-width: 75px;
+    position: absolute;
     right: 5vw;
-    top:0;
-    width:6vw;
+    top: 0;
+    width: 6vw;
     z-index: 10;
   }
-  
+
   /** Headers **/
 
   .header-text {
@@ -464,7 +459,7 @@ a {
     font-size: 3.7vw;
     right: 21vw;
     top: 4.2vw;
-    text-shadow:none;
+    text-shadow: none;
   }
 
   #faq-text {
@@ -482,7 +477,8 @@ a {
     top: 43.5vw;
   }
 
-  #sponsors-text { /* not relevant for makes */
+  #sponsors-text {
+    /* not relevant for makes */
     right: 1vw;
     top: 12vw;
   }
@@ -510,37 +506,44 @@ a {
     z-index: 2;
   }
 
-  #pin1 { /* faq */
+  #pin1 {
+    /* faq */
     left: 49.8vw;
     top: 18vw;
   }
 
-  #pin2 { /* register */
+  #pin2 {
+    /* register */
     left: 80.8vw;
     top: 47vw;
   }
-        
-  #pin3 { /* schedule */
+
+  #pin3 {
+    /* schedule */
     left: 37.8vw;
     top: 47.3vw;
   }
 
-  #pin4 { /* sponsor --> not relevant for makes */ 
+  #pin4 {
+    /* sponsor --> not relevant for makes */
     right: 6.5vw;
     top: 14.3vw;
   }
 
-  #pin5 { /* about */
+  #pin5 {
+    /* about */
     right: 89.3vw;
     top: 32.2vw;
   }
 
-  #pin6 { /* workshops */
+  #pin6 {
+    /* workshops */
     left: 27.3vw;
     top: 18.7vw;
   }
 
-  #pin7 { /* projects */
+  #pin7 {
+    /* projects */
     right: 24.3vw;
     top: 18.5vw;
   }
@@ -551,31 +554,35 @@ a {
     z-index: 2;
   }
 
-  #character1 { /* lighthouse - faq */
+  #character1 {
+    /* lighthouse - faq */
     left: 10.3vw;
     top: 28vw;
     width: 2.2vw;
   }
 
-  #character2 { /* mayor - registration */
+  #character2 {
+    /* mayor - registration */
     left: 42.9vw;
     top: 17.5vw;
     width: 2.2vw;
   }
 
-  #character3 { /* resident - about */
+  #character3 {
+    /* resident - about */
     left: 77.2vw;
     top: 39.5vw;
     width: 2.6vw;
   }
 
-  #character4 { /* mapshop - schedule */
+  #character4 {
+    /* mapshop - schedule */
     left: 47.83vw;
     top: 42.15vw;
     width: 2.366vw;
   }
 
-  #banner{
+  #banner {
     margin: 0;
     position: absolute;
     width: 100vw;
@@ -607,14 +614,13 @@ a {
 @media (min-device-width: 800px) and (min-width: 800px) and (min-height: 60vw) {
   #desktop-container {
     height: 100vh;
-  }       
+  }
 
   #backdrop-container {
     height: 100vh;
-  }       
+  }
 
   #world-container {
     height: 100vh;
-  }       
+  }
 }
-
