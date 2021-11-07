@@ -64,41 +64,37 @@ const FAQ_ANSWER_1 =
   "make sure to confirm your participation during 7th Week when we " +
   "send out confirmation emails.";
 const FAQ_ANSWER_2 =
-  "Click the registration button above! " +
-  "due to space constraints, we’re unable to accept everyone, " +
-  "but we’re looking for students with a broad variety of interests " +
-  "and backgrounds who are excited about building crazy " +
-  "things and learning in the process. If you’ve never " +
-  "been to a hackathon or don’t have tons of software " +
-  "development experience, that won’t disadvantage you in the review process! " +
-  "We’ll review the first wave of applications starting january 1st, " +
-  "and send out decisions mid-january. ";
+  "No, you do not need to be present for two days or even an entire " +
+  "day. Just indicate on the registration form which events you’ll be" + 
+  "attending. However, each day of Makes will feature workshops as" +
+  "well as free time to work and seek mentorship that we’d love for " +
+  "you to participate in!";
 const FAQ_ANSWER_3 =
-  "February 15-16, 2020 @ the Polsky Exchange, " +
-  "1452 E 53rd st, 2nd floor, Chicago, IL, 60615.";
+  "Yes! We’ll be livestreaming the workshops and offer opportunities " + 
+  "to collaborate on projects remotely.";
 const FAQ_ANSWER_4 =
-  "Yes! We allow teams of up to 4. You can make your team before the event happens," +
-  "or you can find a teammate during our team matching event when you get here.";
+  "The workshops are beginner-level but they do require very basic CS " +
+  "experience. You will have no problem if you have taken any CS class " +
+  "before but we also welcome all students to attend.";
 const FAQ_ANSWER_5 =
-  "Nothing! Uncommon Hacks will provide wifi, meals, swag, and workspace ";
+  "We will be providing individually packed meals on Friday; on Saturday" +
+  "we will have lots of snacks and refreshments for participants.";
 const FAQ_ANSWER_6 =
-  "This year, we will not be offering travel reimbursement " +
-  "for uncommon hacks. If you have any questions or concerns " +
-  "about travel, feel free to message us or email us at celery@uncommonhacks.com! ";
+  "Yes, we will be accepting walk-ins on a first-come, first-served basis." +
+  "If you forgot to sign up, please try to come early to ensure you get a spot.";
 const FAQ_ANSWER_7 =
-  "The process starts out with the hackathon application, which consists " +
-  "of basic personal questions as well as a few short answer ones. " +
-  "The uncommon hacks team will be reviewing the applications in waves, " +
-  "and the results of your application should show in your application " +
-  "portal. If you’ve been accepted, you will have an RSVP link to complete " +
-  "as confirmation of your attendance. From there, you’re all set - see you in Chicago!";
+  "No! This year, we are splitting Makes into workshops and a makeathon to" + 
+  "make it more accessible and convenient for everyone.";
 const FAQ_ANSWER_8 =
-  "Click here to read a detailed guide about what uncommon hacks " +
-  "is like from a hacker’s perspective.";
+  "No, Uncommon Makes is a much more informal, learning-based event. While" + 
+  "we’ll have project showcases and opportunities for collaboration and mentorship," +
+  "there won’t be various prize categories. Stay tuned for information about Hacks" +
+  "2022 happening in April 2022!";
 const FAQ_ANSWER_9 =
-  "Yes, we follow the major league hacking code of conduct. Click here to read it.";
+  "No, the event will not have any kind of competition and will not require a team." + 
+  "However, workshops and projects can be done in pairs or teams if you’d like!";
 const FAQ_ANSWER_10 =
-  "Email celery@uncommonhacks.com or shoot us a facebook message ";
+  "Workshop materials such as code templates will be provided. We ask that you bring your own laptop.";
 const REGISTRATION_TEXT = "Click here to register";
 const REGISTRATION_URL = "https://uncommon-hacks.typeform.com/to/DyXjDG";
 const STEP = 3;
