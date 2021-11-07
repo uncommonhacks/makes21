@@ -1069,6 +1069,10 @@ function interaction_update() {
   else {
     deactivate_help_state();
   }
+  if (dist(positionX, positionY, TP3X, TP3Y) >= 45) {
+    deactivate_schedule_state();
+  }
+  
 
   if (dist(positionX, positionY, TP4X, TP4Y) < 45) {
     if (banner_state === "faq_answers");
@@ -1109,44 +1113,14 @@ function interaction_update() {
     } else {
       banner_state = "empty";
     }
-  // } else if (dist(positionX, positionY, TP3X, TP3Y) < 45) {
-  //   // schedule??
-  //   console.log("schedule!")
-  //   console.log(schedule_state)
-  //   console.log(schedule_clear)
-  //   banner_state = "empty";
-  //   banner_exit = "empty";
-  //   if (!schedule_state && !schedule_clear) {
-  //     activate_schedule_state();
-  //   }
-  // // } else if (dist(positionX, positionY, 1115, 255) < 45) {
-  // //   // sponsors???
-  // //   banner_state = "empty";
-  // //   banner_exit = "empty";
-  // //   if (!sponsors_state && !sponsors_clear) {
-  // //     activate_sponsors_state();
-  // //   }
-  } else {
-    // console.log("else!");
-    banner_state = "empty";
-    banner_exit = "empty";
-    if (schedule_state) {
-      deactivate_schedule_state();
-    } else if (schedule_clear) {
-      schedule_clear = false;
-    } else if (sponsors_state) {
-      deactivate_sponsors_state();
-    } else if (sponsors_clear) {
-      sponsors_clear = false;
-    }}
-    if (dist(positionX, positionY, TP3X, TP3Y) < 45) {
+  } else if (dist(positionX, positionY, TP3X, TP3Y) < 45) {
     // schedule??
     console.log("schedule!")
     console.log(schedule_state)
     console.log(schedule_clear)
     banner_state = "empty";
     banner_exit = "empty";
-    if (!schedule_state && !schedule_clear) {
+    if (!schedule_clear) {//if (!schedule_state && !schedule_clear) {
       activate_schedule_state();
     }
   // } else if (dist(positionX, positionY, 1115, 255) < 45) {
@@ -1168,39 +1142,7 @@ function interaction_update() {
       deactivate_sponsors_state();
     } else if (sponsors_clear) {
       sponsors_clear = false;
-    }
-  }
-  if (dist(positionX, positionY, TP3X, TP3Y) < 45) {
-    // schedule??
-    // console.log("schedule!")
-    // console.log(schedule_state)
-    // console.log(schedule_clear)
-    banner_state = "empty";
-    banner_exit = "empty";
-    if (!schedule_state && !schedule_clear) {
-      activate_schedule_state();
-    }
-  // } else if (dist(positionX, positionY, 1115, 255) < 45) {
-  //   // sponsors???
-  //   banner_state = "empty";
-  //   banner_exit = "empty";
-  //   if (!sponsors_state && !sponsors_clear) {
-  //     activate_sponsors_state();
-  //   }
-  } else {
-    // console.log("else!");
-    banner_state = "empty";
-    banner_exit = "empty";
-    if (schedule_state) {
-      deactivate_schedule_state();
-    } else if (schedule_clear) {
-      schedule_clear = false;
-    } else if (sponsors_state) {
-      deactivate_sponsors_state();
-    } else if (sponsors_clear) {
-      sponsors_clear = false;
-    }
-  }
+  }}
 
   if (banner_state != prev_banner_state || redraw_banner) {
     if (banner_state === "empty") {
