@@ -33,9 +33,7 @@ const HELP_MLH_COC_RECT = [115, 1135, 270, 310];
 const SCHED_EXIT_RECT = [370, 415, 85, 120];
 const DRAPE_EXIT_RECT = [370, 415, 35, 70];
 
-const WORKSHOPS_INITIAL_TEXT = "Workshop Information TBA\n"+
-"Dynamic HTML\n"+
-"Data Visualization";
+const WORKSHOPS_INITIAL_TEXT = "Workshop Information TBA";
 
 const PROJECTS_INITIAL_TEXT = "Project Information";
 
@@ -1115,9 +1113,9 @@ function interaction_update() {
     }
   } else if (dist(positionX, positionY, TP3X, TP3Y) < 45) {
     // schedule??
-    console.log("schedule!")
-    console.log(schedule_state)
-    console.log(schedule_clear)
+    // console.log("schedule!")
+    // console.log(schedule_state)
+    // console.log(schedule_clear)
     banner_state = "empty";
     banner_exit = "empty";
     if (!schedule_clear) {//if (!schedule_state && !schedule_clear) {
@@ -1733,7 +1731,7 @@ function init() {
   drape_canvas.addEventListener("click", drapeClickEventHandler);
 
   /* Load the background. Then enter the animation frame loop. */
-  img.src = "assets/main.png";
+  img.src = "assets_new/main.png";
   img.onload = function () {
     window.requestAnimationFrame(gameLoop);
   };
