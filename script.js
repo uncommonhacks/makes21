@@ -467,6 +467,16 @@ function banner_click(event) {
       abouttext.change_block(1);
     }
     redraw_banner = true;
+  } else if (rect_contains(downarrow_banner_rect, x, y)) {
+    if (banner_state === "faq_questions") {
+      faqs.change_block(1);
+    } else if (banner_state === "faq_answers") {
+      answerstxt.change_block(1);
+    } else if (banner_state === "about") {
+      abouttext.change_block(1);
+    }
+    redraw_banner = true;
+    
   } else if (rect_contains(backarrow_banner_rect, x, y)) {
     if (banner_state === "faq_answers") {
       banner_state = "faq_questions";
@@ -474,6 +484,10 @@ function banner_click(event) {
       banner_exit = "faq_questions";
     } else if (banner_state === "about") {
       banner_exit = "about";
+    } else if (banner_state === "projects") {
+      banner_exit = "projects";
+    } else if (banner_state === "workshops") {
+      banner_exit = "workshops";
     } else if (banner_state === "registration") {
       banner_exit = "registration";
     }
