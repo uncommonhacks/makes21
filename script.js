@@ -216,6 +216,7 @@ const BOUNDING_BOXES = [
   [895, 920, 345, 648],
   [895, 1050, 622, 648],
   [920, 945, 220, 370],
+  DRAPE_EXIT_RECT,
   //   [BB6XL, BB6XH, BB6YL, BB6YH],
   //   [BB7XL, BB7XH, BB7YL, BB7YH],
   //   [BB8XL, BB8XH, BB8YL, BB8YH],
@@ -491,6 +492,8 @@ function banner_click(event) {
       banner_exit = "workshops";
     } else if (banner_state === "registration") {
       banner_exit = "registration";
+    } else if (banner_state === "help") {
+      banner_exit = "help";
     }
     redraw_banner = true;
   } else if (banner_state === "faq_questions") {
@@ -1061,15 +1064,16 @@ function draw_sponsors() {
  * Returns: none
  */
 function interaction_update() {
-  if (dist(positionX, positionY, 110, 600) < 45) {
-    activate_help_state();
-  }
-  else {
-    deactivate_help_state();
-  }
-  if (dist(positionX, positionY, TP3X, TP3Y) >= 45) {
-    deactivate_schedule_state();
-  }
+  // if (dist(positionX, positionY, 110, 600) < 45) {
+  //   // console.log("HELP")
+  //   activate_help_state();
+  // }
+  // else if (dist(positionX, positionY, 110, 600) < 100) {
+  //   deactivate_help_state();
+  // }
+  // if (dist(positionX, positionY, TP3X, TP3Y) >= 45) {
+  //   deactivate_schedule_state();
+  // }
   
 
   if (dist(positionX, positionY, TP4X, TP4Y) < 45) {
@@ -1354,6 +1358,7 @@ function sketchpadClickEventHandler(event) {
   var y = (event.clientY - rect.top) * scaleY;
 
   if (rect_contains(HELP_BUTTON_RECT, x, y)) {
+    console.log("uwu")
     activate_help_state();
   } else {
     teleport(event);
@@ -1373,6 +1378,11 @@ function drapeClickEventHandler(event) {
   var x = (event.clientX - rect.left) * scaleX; // scale mouse coordinates after they have
   var y = (event.clientY - rect.top) * scaleY;
   //console.log("cx " + x + " cy " + y);
+  console.log("AA");
+  if (rect_contains(DRAPE_EXIT_RECT, x, y)) {
+    console.log("AAAA");
+    deactivate_help_state();
+  }
   if (help_state) {
     if (rect_contains(DRAPE_EXIT_RECT, x, y)) {
       deactivate_help_state();
@@ -1684,7 +1694,7 @@ function gameLoop() {
   interaction_update();
 
   /* Misc updates. */
-  if (1) {
+  if (DEBUG) {
     draw_path();
   }
 
@@ -1696,7 +1706,7 @@ function gameLoop() {
 
 function init() {
   /* Do static loads. */
-  deactivate_schedule_state();
+  // deactivate_schedule_state();
   uparrow.src = "./assets/up-03.svg";
   downarrow.src = "./assets/down-04.svg";
   backarrow.src = "./assets/back-02.svg";
@@ -1734,5 +1744,6 @@ function init() {
   img.src = "assets/main.png";
   img.onload = function () {
     window.requestAnimationFrame(gameLoop);
+    activate_help_state();
   };
 }
