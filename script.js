@@ -5,15 +5,21 @@
 /** CONSTANTS **/
 
 const SCHEDULE_TXT_DAY_1 ="6:00|pm Opening & Introduction\n" +
-  "6:30|pm Workshop 1 (Dynamic HTML)\n" +
+  "\n" +
+  "6:30|pm WS1 (Dynamic HTML)\n" +
+  "\n" +
   "7:30|pm Dinner\n" +
-  "8:00|pm (Data Visualization)\n" +
-  "|\n"+
-  "8:45-| \n" +
-  "11:30 |pm Team Formation & Work Time\n"
+  "\n" +
+  "8:00|pm WS2 (Data Visualization)\n" +
+  "\n" +
+  "8:45|pm Team Formation & Work Time\n" +
+  "\n" +
+  "11:30|pm Conclusion of Makes Day 1\n"
 const SCHEDULE_TXT_DAY_2 =
-    "1:00|pm Check-in with mentors/work time\n" +
+    "1:00|pm Mentor check-in/work\n" +
+    "\n" +
     "2:00|pm Snacks + <activity> Break\n" +
+    "\n" +
     "5:00|pm Closing + showcase\n"
 const HACKER_GUIDE_URL = "https://github.com/uncommonhacks/guide";
 const HELP_TXT =
@@ -43,25 +49,20 @@ const ABOUT_INITIAL_TEXT = "The Uncommon Hacks team is bringing you Uncommon Mak
   // "and having fun in the process.";
 
 const FAQ_INITIAL_TEXT =
-  "+ What's a hackathon? " +
-  "+ How do I apply? " +
-  "+ When and where is uncommon hacks? " +
-  "+ Can I form my own team? " +
-  "+ How much does it cost? " +
-  "+ Do you offer travel reimbursement? " +
-  "+ What is the application process? " +
-  "+ What exactly happens at a hackathon? " +
-  "+ Do you have other rules? " +
-  "+ What if i have another question? ";
+  "1. How can I apply to Uncommon Makes 2021? " +
+  "2. If I want to go to one workshop, do I have to attend the whole event and do I have to attend both days? " +
+  "3. Can I participate remotely? " +
+  "4. I’ve never coded before. Will I be able to participate in the workshops? " +
+  "5. Will lunch or dinner be provided? " +
+  "6. The event is tomorrow and I forgot to sign up! Can I still attend? " +
+  "7. I participated in Uncommon Makes in previous years. Will the event be the same? " +
+  "8. I participated in Uncommon Hacks last year. Will the event be the same? " +
+  "9. Do I have to come to the event with a team? " +
+  "10. Will materials (computers, hardware, etc.) be provided? ";
 const FAQ_ANSWER_1 =
-  "Hackathons are invention marathons where attendees " +
-  "are encouraged to collaborate on a project. " +
-  "Hackers will be in a fun, supportive environment " +
-  "with the necessary tools provided to create excellent projects. " +
-  "Newbies encouraged, normies aren’t. This is a safe space to " +
-  "create the weirdest, quirkiest, and most amazing projects ever.\n " +
-  "College students from anywhere are welcome, even if you’re not a computer " +
-  "science major or have never been to a hackathon before!";
+  "Fill out our sign-up form (https://bit.ly/Makes2021Signup) and " +
+  "make sure to confirm your participation during 7th Week when we " +
+  "send out confirmation emails.";
 const FAQ_ANSWER_2 =
   "Click the registration button above! " +
   "due to space constraints, we’re unable to accept everyone, " +
@@ -740,6 +741,9 @@ function draw_schedule_txt(day1, day2) {
 
   for (var i = 0; i < day2.length; i++) {
     line = day2[i].split("|");
+    if(line == ""){
+      continue;
+    }
     drape_ctx.fillText(
       line[0],
       tile_pos_x + 1420,
