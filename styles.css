@@ -442,7 +442,8 @@ a {
     position: absolute;
     z-index: 2;
     letter-spacing: 2px;
-    right: 37.5vw;
+    /* right: 37.5vw; */
+    left: 1vw;
     top: 11.6vw;
   }
 
@@ -457,7 +458,8 @@ a {
 
   #main-text {
     font-size: 3.7vw;
-    right: 21vw;
+    /* right: 21vw; */
+    left: 1vw;
     top: 4.2vw;
     text-shadow: none;
   }
