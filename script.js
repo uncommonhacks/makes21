@@ -1731,7 +1731,7 @@ function init() {
   drape_canvas.addEventListener("click", drapeClickEventHandler);
 
   /* Load the background. Then enter the animation frame loop. */
-  img.src = "assets_new/main.png";
+  img.src = "assets/main.png";
   img.onload = function () {
     window.requestAnimationFrame(gameLoop);
   };
