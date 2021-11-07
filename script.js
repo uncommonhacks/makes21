@@ -241,28 +241,31 @@ const TELEPORT_BOXES = [
   [TP5XL, TP5XH, TP5YL, TP5YH],
   [TP6XL, TP6XH, TP6YL, TP6YH]
 ];
-const TP1X = BB1XL;
-const TP1Y = BB1YL;
-const TP2X = BB7XL;
-const TP2Y = BB7YL;
-const TP3X = 650;
-const TP3Y = BB9YL;
-const TP4X = BB10XL;
-const TP4Y = BB10YL;
-const TP5X = 1120;
-const TP5Y = 254;
+const TP1X = 110;
+const TP1Y = 412;
+const TP2X = 345;
+const TP2Y = 238;
+const TP3X = 474;
+const TP3Y = 595;
+const TP4X = 624;
+const TP4Y = 234;
+const TP5X = 920;
+const TP5Y = 234;
+const TP6X = 1012;
+const TP6Y = 596;
 const TELEPORT_COORDS = [
-  // [TP1X, TP1Y],
-  // [TP2X, TP2Y],
-  // [TP3X, TP3Y],
-  // [TP4X, TP4Y],
-  // [TP5X, TP5Y],
-  [TP1XL, TP1YL],
-  [TP2XL, TP2YL],
-  [TP3XL, TP3YL],
-  [TP4XL, TP4YL],
-  [TP5XL, TP5YL],
-  [TP6XL, TP6YL]
+  [TP1X, TP1Y],
+  [TP2X, TP2Y],
+  [TP3X, TP3Y],
+  [TP4X, TP4Y],
+  [TP5X, TP5Y],
+  [TP6X, TP6Y]
+  // [TP1XL, TP1YL],
+  // [TP2XL, TP2YL],
+  // [TP3XL, TP3YL],
+  // [TP4XL, TP4YL],
+  // [TP5XL, TP5YL],
+  // [TP6XL, TP6YL]
 ];
 const faq_answers = [
   [FAQ_ANSWER_1],
@@ -1060,7 +1063,14 @@ function draw_sponsors() {
  * Returns: none
  */
 function interaction_update() {
-  if (dist(positionX, positionY, TP4XL, TP4YL) < 45) {
+  if (dist(positionX, positionY, 110, 600) < 45) {
+    activate_help_state();
+  }
+  else {
+    deactivate_help_state();
+  }
+
+  if (dist(positionX, positionY, TP4X, TP4Y) < 45) {
     if (banner_state === "faq_answers");
     else if (!(banner_exit === "faq_questions")) {
       banner_state = "faq_questions";
@@ -1068,39 +1078,72 @@ function interaction_update() {
     } else {
       banner_state = "empty";
     }
-  } else if (dist(positionX, positionY, TP6XL, TP6YL) < 45) {
+  } else if (dist(positionX, positionY, TP6X, TP6Y) < 45) {
     if (!(banner_exit === "registration")) {
       banner_state = "registration";
       banner_exit = "empty";
     } else {
       banner_state = "empty";
     }
-  } else if (dist(positionX, positionY, TP1XL, TP1YL) < 45) {
-    // console.log("AAAA")
+  } else if (dist(positionX, positionY, TP1X, TP1Y) < 45) {
+    // //console.log("AAAA")
     if (!(banner_exit === "about")) {
       banner_state = "about";
       banner_exit = "empty";
     } else {
       banner_state = "empty";
     }
-  } else if (dist(positionX, positionY, TP2XL, TP2YL) < 45) {
-    // console.log("AAAA")
+  } else if (dist(positionX, positionY, TP2X, TP2Y) < 45) {
+    // //console.log("AAAA")
     if (!(banner_exit === "workshops")) {
       banner_state = "workshops";
       banner_exit = "empty";
     } else {
       banner_state = "empty";
     }
-  } else if (dist(positionX, positionY, TP5XL, TP5YL) < 45) {
-    // console.log("AAAA")
+  } else if (dist(positionX, positionY, TP5X, TP5Y) < 45) {
+    // //console.log("AAAA")
     if (!(banner_exit === "projects")) {
       banner_state = "projects";
       banner_exit = "empty";
     } else {
       banner_state = "empty";
     }
-  } else if (dist(positionX, positionY, TP3XL, TP3YL) < 45) {
+  // } else if (dist(positionX, positionY, TP3X, TP3Y) < 45) {
+  //   // schedule??
+  //   console.log("schedule!")
+  //   console.log(schedule_state)
+  //   console.log(schedule_clear)
+  //   banner_state = "empty";
+  //   banner_exit = "empty";
+  //   if (!schedule_state && !schedule_clear) {
+  //     activate_schedule_state();
+  //   }
+  // // } else if (dist(positionX, positionY, 1115, 255) < 45) {
+  // //   // sponsors???
+  // //   banner_state = "empty";
+  // //   banner_exit = "empty";
+  // //   if (!sponsors_state && !sponsors_clear) {
+  // //     activate_sponsors_state();
+  // //   }
+  } else {
+    // console.log("else!");
+    banner_state = "empty";
+    banner_exit = "empty";
+    if (schedule_state) {
+      deactivate_schedule_state();
+    } else if (schedule_clear) {
+      schedule_clear = false;
+    } else if (sponsors_state) {
+      deactivate_sponsors_state();
+    } else if (sponsors_clear) {
+      sponsors_clear = false;
+    }}
+    if (dist(positionX, positionY, TP3X, TP3Y) < 45) {
     // schedule??
+    console.log("schedule!")
+    console.log(schedule_state)
+    console.log(schedule_clear)
     banner_state = "empty";
     banner_exit = "empty";
     if (!schedule_state && !schedule_clear) {
@@ -1114,6 +1157,38 @@ function interaction_update() {
   //     activate_sponsors_state();
   //   }
   } else {
+    // console.log("else!");
+    banner_state = "empty";
+    banner_exit = "empty";
+    if (schedule_state) {
+      deactivate_schedule_state();
+    } else if (schedule_clear) {
+      schedule_clear = false;
+    } else if (sponsors_state) {
+      deactivate_sponsors_state();
+    } else if (sponsors_clear) {
+      sponsors_clear = false;
+    }
+  }
+  if (dist(positionX, positionY, TP3X, TP3Y) < 45) {
+    // schedule??
+    // console.log("schedule!")
+    // console.log(schedule_state)
+    // console.log(schedule_clear)
+    banner_state = "empty";
+    banner_exit = "empty";
+    if (!schedule_state && !schedule_clear) {
+      activate_schedule_state();
+    }
+  // } else if (dist(positionX, positionY, 1115, 255) < 45) {
+  //   // sponsors???
+  //   banner_state = "empty";
+  //   banner_exit = "empty";
+  //   if (!sponsors_state && !sponsors_clear) {
+  //     activate_sponsors_state();
+  //   }
+  } else {
+    // console.log("else!");
     banner_state = "empty";
     banner_exit = "empty";
     if (schedule_state) {
@@ -1357,7 +1432,7 @@ function drapeClickEventHandler(event) {
   var scaleY = canvas.height / rect.height; // relationship bitmap vs. element for Y
   var x = (event.clientX - rect.left) * scaleX; // scale mouse coordinates after they have
   var y = (event.clientY - rect.top) * scaleY;
-  console.log("cx " + x + " cy " + y);
+  //console.log("cx " + x + " cy " + y);
   if (help_state) {
     if (rect_contains(DRAPE_EXIT_RECT, x, y)) {
       deactivate_help_state();
@@ -1380,7 +1455,7 @@ function drapeClickEventHandler(event) {
     } else if (rect_contains(imc_rect, x, y)) {
       window.open(imc_url);
     } else if (rect_contains(n26_rect, x, y)) {
-      console.log("n26");
+      //console.log("n26");
       window.open(n26_url);
     } else if (rect_contains(pathrise_rect, x, y)) {
       window.open(pathrise_url);
@@ -1424,7 +1499,7 @@ function keyUpListener(event) {
 /** CHARACTER MOVEMENT **/
 
 function legalPosition(x, y) {
-  console.log(x, y);
+  // //console.log(x, y);
   /* The character coordinates are the top-left coordinates of its image. */
   var tlx = x;
   var tly = y;
@@ -1453,7 +1528,7 @@ function legalPosition(x, y) {
     bbxh = bb[1] + CHARACTER_CANVAS_WIDTH / 2;
     bbyl = bb[2] - CHARACTER_CANVAS_HEIGHT + 5;
     bbyh = bb[3] + CHARACTER_CANVAS_HEIGHT - 40;
-    console.log(bbxl, tlx, tlx, bbxh, bbyl, tly, tly, bbyh);
+    //console.log(bbxl, tlx, tlx, bbxh, bbyl, tly, tly, bbyh);
     if (bbxl <= tlx && tlx <= bbxh && bbyl <= tly && tly <= bbyh) {
       top_left_legal = true;
     }
@@ -1477,7 +1552,7 @@ function legalPosition(x, y) {
       break;
     }
   }
-  console.log(top_left_legal, top_right_legal, bot_left_legal, bot_right_legal);
+  //console.log(top_left_legal, top_right_legal, bot_left_legal, bot_right_legal);
   return legal;
 }
 
@@ -1604,10 +1679,10 @@ function draw_path() {
 
 function character_update() {
   let hasMoved = false;
-
+  // //console.log(positionX, positionY);
   /* Update the character's position. */
   if (keyPresses.w) {
-    console.log("w");
+    // console.log("w");
     moveCharacter(0, -MOVEMENT_SPEED, FACING_UP);
     hasMoved = true;
   } else if (keyPresses.s) {
@@ -1662,6 +1737,7 @@ function character_update() {
  */
 function gameLoop() {
   /* Do character updates / redraws. */
+  // console.log("f");
   character_update();
 
   /* Do interaction updates / redraws. */
@@ -1680,6 +1756,7 @@ function gameLoop() {
 
 function init() {
   /* Do static loads. */
+  deactivate_schedule_state();
   uparrow.src = "./assets/up-03.svg";
   downarrow.src = "./assets/down-04.svg";
   backarrow.src = "./assets/back-02.svg";
