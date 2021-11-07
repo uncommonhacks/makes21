@@ -178,15 +178,15 @@ const BB11YH = 295 * SCALE;
 const BB11YL = BB11YH - CHARACTER_CANVAS_HEIGHT;
 
 const BOUNDING_BOXES = [
-  [110, 135, 648, 425],
-  [0, 650, 512, 490],
-  [130, 520, 648, 622],
-  [345, 368, 648, 240],
-  [625, 650, 512, 240],
-  [650, 1250, 370, 345],
-  [895, 920, 648, 345],
-  [895, 1050, 648, 622],
-  [920, 945, 370, 220],
+  [110, 135, 425, 648],
+  [0, 650, 490, 512],
+  [130, 520, 622, 648],
+  [345, 368, 240, 648],
+  [625, 650, 240, 512],
+  [650, 1250, 345, 370],
+  [895, 920, 345, 648],
+  [895, 1050, 622, 648],
+  [920, 945, 220, 370],
   //   [BB6XL, BB6XH, BB6YL, BB6YH],
   //   [BB7XL, BB7XH, BB7YL, BB7YH],
   //   [BB8XL, BB8XH, BB8YL, BB8YH],
@@ -1239,6 +1239,7 @@ function keyUpListener(event) {
 /** CHARACTER MOVEMENT **/
 
 function legalPosition(x, y) {
+  console.log(x, y);
   /* The character coordinates are the top-left coordinates of its image. */
   var tlx = x;
   var tly = y;
@@ -1263,11 +1264,11 @@ function legalPosition(x, y) {
    * are contained in at least one box. */
   for (var i = 0; i < BOUNDING_BOXES.length; i++) {
     bb = BOUNDING_BOXES[i];
-    bbxl = bb[0];
-    bbxh = bb[1];
-    bbyl = bb[2];
-    bbyh = bb[3];
-
+    bbxl = bb[0] - CHARACTER_CANVAS_WIDTH;
+    bbxh = bb[1] + CHARACTER_CANVAS_WIDTH;
+    bbyl = bb[2] - CHARACTER_CANVAS_HEIGHT;
+    bbyh = bb[3] + CHARACTER_CANVAS_HEIGHT;
+    console.log(bbxl, tlx, tlx, bbxh, bbyl, tly, tly, bbyh);
     if (bbxl <= tlx && tlx <= bbxh && bbyl <= tly && tly <= bbyh) {
       top_left_legal = true;
     }
@@ -1280,12 +1281,18 @@ function legalPosition(x, y) {
     if (bbxl <= blx && blx <= bbxh && bbyl <= bly && bly <= bbyh) {
       bot_left_legal = true;
     }
-  }
 
-  if (top_left_legal && top_right_legal && bot_left_legal && bot_right_legal) {
-    legal = true;
+    if (
+      top_left_legal &&
+      top_right_legal &&
+      bot_left_legal &&
+      bot_right_legal
+    ) {
+      legal = true;
+      break;
+    }
   }
-
+  console.log(top_left_legal, top_right_legal, bot_left_legal, bot_right_legal);
   return legal;
 }
 
@@ -1415,6 +1422,7 @@ function character_update() {
 
   /* Update the character's position. */
   if (keyPresses.w) {
+    console.log("w");
     moveCharacter(0, -MOVEMENT_SPEED, FACING_UP);
     hasMoved = true;
   } else if (keyPresses.s) {
