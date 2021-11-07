@@ -4,36 +4,17 @@
 
 /** CONSTANTS **/
 
-const SCHEDULE_TXT_DAY_1 =
-  "09:00 |am – Doors Open \n" +
-  "09:30 |am – Breakfast Available\n" +
-  "10:00 |am – sponsor fair starts\n" +
-  "11:00 |am – team formation\n" +
-  "11:30 |am – opening ceremony\n" +
-  "12:00 |PM – hacking starts\n" +
-  "12:30 |PM – lunch: sponsored by IMC\n" +
-  "01:30 |PM – VR Workshop\n" +
-  "02:00 |PM – sponsor fair ends\n" +
-  "02:45 |PM – Workshop #2\n" +
-  "03:45 |PM – MLH: Slideshow Karaoke\n" +
-  "05:00 |PM – Intercontinental Battleship\n" +
-  "06:30 |PM – dinner\n" +
-  "07:30 |PM – MLH: CTF \n" +
-  "07:30 |PM – La Croix Taste Test\n" +
-  "08:30 |PM – Pictionary\n" +
-  "10:00 |PM – ;)";
+const SCHEDULE_TXT_DAY_1 ="6:00|pm Opening & Introduction\n" +
+  "6:30|pm Workshop 1 (Dynamic HTML)\n" +
+  "7:30|pm Dinner\n" +
+  "8:00|pm (Data Visualization)\n" +
+  "|\n"+
+  "8:45-| \n" +
+  "11:30 |pm Team Formation & Work Time\n"
 const SCHEDULE_TXT_DAY_2 =
-  "12:00 |am – soylent pong\n" +
-  "08:00 |am – breakfast\n" +
-  "08:30 |am – Origami\n" +
-  "11:30 |am - Submit to Devpost\n" +
-  "12:00 |PM – hacking ends\n" +
-  "12:00 |PM – lunch\n" +
-  "01:00 |PM – Judging starts\n" +
-  "02:30 |PM – Judging ends\n" +
-  "03:00 |PM – Live demos\n" +
-  "03:30 |PM – prizes\n" +
-  "04:00 |PM – Closing Ceremony";
+    "1:00|pm Check-in with mentors/work time\n" +
+    "2:00|pm Snacks + <activity> Break\n" +
+    "5:00|pm Closing + showcase\n"
 const HACKER_GUIDE_URL = "https://github.com/uncommonhacks/guide";
 const HELP_TXT =
   "* Use W, A, S, D to move. \n" +
@@ -46,12 +27,20 @@ const HELP_MLH_COC_RECT = [115, 1135, 270, 310];
 const SCHED_EXIT_RECT = [370, 415, 85, 120];
 const DRAPE_EXIT_RECT = [370, 415, 35, 70];
 
-const ABOUT_INITIAL_TEXT =
-  "Uncommon hacks is a weekend-long celebration of technology where college " +
-  "students from everywhere come to chicago to make fun, random, and innovative " +
-  "tech-related projects with friends old and new. You'll work in a small team " +
-  "to design and build a creative project from start to finish in a weekend, learning " +
-  "and having fun in the process.";
+const ABOUT_INITIAL_TEXT = "The Uncommon Hacks team is bringing you Uncommon Makes," +
+" a collaborative makeathon and workshop series!"+
+" We will present a series of workshops and talks geared"+
+" towards UChicago students interested in getting their hands dirty with web-based technologies."+
+" Over the course of the event, attend workshops that showcase several cool ways to build a site,"+
+" and then make an HTML page of your own! At the end, we’ll stitch all of them together in an e-quilt"+
+" that will celebrate the creativity of the tech community at UChicago."+
+" Join us at the MADD Center at Crerar to learn, create, and make!"
+
+  // "Uncommon hacks is a weekend-long celebration of technology where college " +
+  // "students from everywhere come to chicago to make fun, random, and innovative " +
+  // "tech-related projects with friends old and new. You'll work in a small team " +
+  // "to design and build a creative project from start to finish in a weekend, learning " +
+  // "and having fun in the process.";
 
 const FAQ_INITIAL_TEXT =
   "+ What's a hackathon? " +
@@ -177,6 +166,45 @@ const BB11XH = 1170 * SCALE;
 const BB11YH = 295 * SCALE;
 const BB11YL = BB11YH - CHARACTER_CANVAS_HEIGHT;
 
+
+// about
+const TP1XL = 105;
+const TP1YL = 400;
+const TP1XH = 370;
+const TP1YH = 500;
+
+
+// workshops
+const TP2XL = 320;
+const TP2YL = 210;
+const TP2XH = 550;
+const TP2YH = 310;
+
+// schedule
+const TP3XL = 370;
+const TP3YL = 520;
+const TP3XH = 550;
+const TP3YH = 650;
+
+// FAQ
+
+const TP4XL = 600;
+const TP4YL = 210;
+const TP4XH = 850;
+const TP4YH = 310;
+
+// Projects
+const TP5XL = 900;
+const TP5YL = 210;
+const TP5XH = 1250;
+const TP5YH = 310;
+
+// Register
+const TP6XL = 910;
+const TP6YL = 520;
+const TP6XH = 1100;
+const TP6YH = 650;
+
 const BOUNDING_BOXES = [
   [110, 135, 425, 648],
   [0, 650, 490, 512],
@@ -193,36 +221,14 @@ const BOUNDING_BOXES = [
   //   [BB9XL, BB9XH, BB9YL, BB9YH],
   //   [BB10XL, BB10XH, BB10YL, BB10YH],
   //   [BB11XL, BB11XH, BB11YL, BB11YH],
+  [TP1XL, TP1XH, TP1YL, TP1YH],
+  [TP2XL, TP2XH, TP2YL, TP2YH],
+  [TP3XL, TP3XH, TP3YL, TP3YH],
+  [TP4XL, TP4XH, TP4YL, TP4YH],
+  [TP5XL, TP5XH, TP5YL, TP5YH],
+  [TP6XL, TP6XH, TP6YL, TP6YH]
 ];
-const TP1XL = 105;
-const TP1YL = 400;
-const TP1XH = 370;
-const TP1YH = 500;
 
-const TP2XL = 320;
-const TP2YL = 210;
-const TP2XH = 550;
-const TP2YH = 310;
-
-const TP3XL = 370;
-const TP3YL = 520;
-const TP3XH = 550;
-const TP3YH = 650;
-
-const TP4XL = 600;
-const TP4YL = 210;
-const TP4XH = 850;
-const TP4YH = 310;
-
-const TP5XL = 900;
-const TP5YL = 210;
-const TP5XH = 1250;
-const TP5YH = 310;
-
-const TP6XL = 910;
-const TP6YL = 520;
-const TP6XH = 1100;
-const TP6YH = 650;
 
 const TELEPORT_BOXES = [
   [TP1XL, TP1XH, TP1YL, TP1YH],
@@ -230,7 +236,7 @@ const TELEPORT_BOXES = [
   [TP3XL, TP3XH, TP3YL, TP3YH],
   [TP4XL, TP4XH, TP4YL, TP4YH],
   [TP5XL, TP5XH, TP5YL, TP5YH],
-  [TP6XL, TP6XH, TP6YL, TP6YH],
+  [TP6XL, TP6XH, TP6YL, TP6YH]
 ];
 const TP1X = BB1XL;
 const TP1Y = BB1YL;
@@ -243,11 +249,17 @@ const TP4Y = BB10YL;
 const TP5X = 1120;
 const TP5Y = 254;
 const TELEPORT_COORDS = [
-  [TP1X, TP1Y],
-  [TP2X, TP2Y],
-  [TP3X, TP3Y],
-  [TP4X, TP4Y],
-  [TP5X, TP5Y],
+  // [TP1X, TP1Y],
+  // [TP2X, TP2Y],
+  // [TP3X, TP3Y],
+  // [TP4X, TP4Y],
+  // [TP5X, TP5Y],
+  [TP1XL, TP1YL],
+  [TP2XL, TP2YL],
+  [TP3XL, TP3YL],
+  [TP4XL, TP4YL],
+  [TP5XL, TP5YL],
+  [TP6XL, TP6YL]
 ];
 const faq_answers = [
   [FAQ_ANSWER_1],
@@ -310,7 +322,7 @@ let is_registration = 0;
 let keyPresses = {};
 var prevX, prevY;
 var positionX = 300;
-var positionY = 512 - CHARACTER_CANVAS_HEIGHT;
+var positionY = 512- CHARACTER_CANVAS_HEIGHT;
 
 let uparrow_src_xl = 0;
 let uparrow_src_yl = 0;
@@ -689,14 +701,14 @@ function draw_schedule_txt(day1, day2) {
   tile_pos_y = canvas.height / 2 - 255;
   drape_ctx.font = "105px silkscreen";
   drape_ctx.fillText(
-    "saturday, february 15",
+    "Friday, November 12",
     tile_pos_x - 220,
     tile_pos_y + 400
   );
 
   drape_ctx.font = "105px silkscreen";
   drape_ctx.fillText(
-    "Sunday, february 16",
+    "Saturday, November 13",
     tile_pos_x + 1420,
     tile_pos_y + 400
   );
@@ -950,7 +962,7 @@ function draw_sponsors() {
  * Returns: none
  */
 function interaction_update() {
-  if (dist(positionX, positionY, 135, 340) < 45) {
+  if (dist(positionX, positionY, TP4XL, TP4YL) < 45) {
     if (banner_state === "faq_answers");
     else if (!(banner_exit === "faq_questions")) {
       banner_state = "faq_questions";
@@ -958,32 +970,51 @@ function interaction_update() {
     } else {
       banner_state = "empty";
     }
-  } else if (dist(positionX, positionY, 490, 220) < 45) {
+  } else if (dist(positionX, positionY, TP6XL, TP6YL) < 45) {
     if (!(banner_exit === "registration")) {
       banner_state = "registration";
       banner_exit = "empty";
     } else {
       banner_state = "empty";
     }
-  } else if (dist(positionX, positionY, 1000, 510) < 45) {
+  } else if (dist(positionX, positionY, TP1XL, TP1YL) < 45) {
+    // console.log("AAAA")
     if (!(banner_exit === "about")) {
       banner_state = "about";
       banner_exit = "empty";
     } else {
       banner_state = "empty";
     }
-  } else if (dist(positionX, positionY, 615, 567) < 45) {
+  } else if (dist(positionX, positionY, TP2XL, TP2YL) < 45) {
+    // console.log("AAAA")
+    if (!(banner_exit === "workshops")) {
+      banner_state = "workshops";
+      banner_exit = "empty";
+    } else {
+      banner_state = "empty";
+    }
+  } else if (dist(positionX, positionY, TP5XL, TP5YL) < 45) {
+    // console.log("AAAA")
+    if (!(banner_exit === "projects")) {
+      banner_state = "projects";
+      banner_exit = "empty";
+    } else {
+      banner_state = "empty";
+    }
+  } else if (dist(positionX, positionY, TP3XL, TP3YL) < 45) {
+    // schedule??
     banner_state = "empty";
     banner_exit = "empty";
     if (!schedule_state && !schedule_clear) {
       activate_schedule_state();
     }
-  } else if (dist(positionX, positionY, 1115, 255) < 45) {
-    banner_state = "empty";
-    banner_exit = "empty";
-    if (!sponsors_state && !sponsors_clear) {
-      activate_sponsors_state();
-    }
+  // } else if (dist(positionX, positionY, 1115, 255) < 45) {
+  //   // sponsors???
+  //   banner_state = "empty";
+  //   banner_exit = "empty";
+  //   if (!sponsors_state && !sponsors_clear) {
+  //     activate_sponsors_state();
+  //   }
   } else {
     banner_state = "empty";
     banner_exit = "empty";
@@ -1032,7 +1063,7 @@ function rect_contains(rect, x, y) {
 function teleport_text_action(x, y) {
   if (rect_contains(TELEPORT_BOXES[0], x, y)) {
     about_header_text.setAttribute(
-      //faq_header_text.setAttribute(
+    //faq_header_text.setAttribute(
       "style",
       // "font-size: 2.8vw;" // left: 15.5vw; top: 17vw;"
       "color: red;"
@@ -1073,7 +1104,7 @@ function teleport_text_action(x, y) {
       "color: red;"
     );
     header_text_changed = true;
-  } else if (header_text_changed) {
+  }else if (header_text_changed) {
     about_header_text.setAttribute(
       "style",
       // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
@@ -1104,6 +1135,7 @@ function teleport_text_action(x, y) {
       // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
       "color: #f9e512;"
     );
+
 
     // register_header_text.setAttribute(
     //   "style",
