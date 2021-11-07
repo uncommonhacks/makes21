@@ -28,10 +28,16 @@ const HELP_TXT =
   "   teleport around the \n" +
   "   map.\n";
 const MLH_COC_URL = "https://static.mlh.io/docs/mlh-code-of-conduct.pdf";
-const HELP_BUTTON_RECT = [1190, 1240, 20, 55];
+const HELP_BUTTON_RECT = [30, 110, 200, 250];
 const HELP_MLH_COC_RECT = [115, 1135, 270, 310];
 const SCHED_EXIT_RECT = [370, 415, 85, 120];
 const DRAPE_EXIT_RECT = [370, 415, 35, 70];
+
+const WORKSHOPS_INITIAL_TEXT = "Workshop Information TBA\n"+
+"Dynamic HTML\n"+
+"Data Visualization";
+
+const PROJECTS_INITIAL_TEXT = "Project Information";
 
 const ABOUT_INITIAL_TEXT = "The Uncommon Hacks team is bringing you Uncommon Makes," +
 " a collaborative makeathon and workshop series!"+
@@ -96,7 +102,7 @@ const FAQ_ANSWER_9 =
 const FAQ_ANSWER_10 =
   "Workshop materials such as code templates will be provided. We ask that you bring your own laptop.";
 const REGISTRATION_TEXT = "Click here to register";
-const REGISTRATION_URL = "https://uncommon-hacks.typeform.com/to/DyXjDG";
+const REGISTRATION_URL = "https://bit.ly/Makes2021Signup";
 const STEP = 3;
 const SCALE = 1;
 const CHARACTER_FRAME_WIDTH = 26;
@@ -283,6 +289,9 @@ var drape_scale = 3;
 var fm_default = 5;
 var fm_answerstxt = 6;
 var abouttext = new Pktext(banner_canvas, banner_ctx, false, 4, fm_default);
+var workshopstext = new Pktext(banner_canvas, banner_ctx, false, 4, fm_default);
+var projectstext = new Pktext(banner_canvas, banner_ctx, false, 4, fm_default);
+
 var faqs = new Pktext(banner_canvas, banner_ctx, true, 4, fm_default);
 var answerstxt = new Pktext(banner_canvas, banner_ctx, false, 4, fm_answerstxt);
 var registrationtxt = new Pktext(
@@ -318,8 +327,9 @@ let is_about = 0;
 let is_registration = 0;
 let keyPresses = {};
 var prevX, prevY;
-var positionX = 300;
-var positionY = 512- CHARACTER_CANVAS_HEIGHT;
+var positionX = 110;//300;
+var positionY = 600; //512- CHARACTER_CANVAS_HEIGHT;
+
 
 let uparrow_src_xl = 0;
 let uparrow_src_yl = 0;
@@ -598,6 +608,80 @@ function draw_banner(bc, bctx, bstate) {
         banner_canvas.width * 0.0135,
         banner_canvas.width * 0.175,
         banner_canvas.width * 0.145
+      );
+      break;
+    case "workshops":
+      draw_hdr(bctx, "WORKSHOPS");
+      draw_text(bctx, workshopstext, body_font);
+      banner_ctx.drawImage(
+        uparrow,
+        uparrow_src_xl,
+        uparrow_src_xl,
+        uparrow_src_w,
+        uparrow_src_h,
+        uparrow_banner_xl,
+        uparrow_banner_yl,
+        uparrow_banner_w,
+        uparrow_banner_h
+      );
+      banner_ctx.drawImage(
+        downarrow,
+        downarrow_src_xl,
+        downarrow_src_xl,
+        downarrow_src_w,
+        downarrow_src_h,
+        downarrow_banner_xl,
+        downarrow_banner_yl,
+        downarrow_banner_w,
+        downarrow_banner_h
+      );
+      banner_ctx.drawImage(
+        backarrow,
+        backarrow_src_xl,
+        backarrow_src_xl,
+        backarrow_src_w,
+        backarrow_src_h,
+        backarrow_banner_xl,
+        backarrow_banner_yl,
+        backarrow_banner_w,
+        backarrow_banner_h
+      );
+      break;
+    case "projects":
+      draw_hdr(bctx, "PROJECTS");
+      draw_text(bctx, projectstext, body_font);
+      banner_ctx.drawImage(
+        uparrow,
+        uparrow_src_xl,
+        uparrow_src_xl,
+        uparrow_src_w,
+        uparrow_src_h,
+        uparrow_banner_xl,
+        uparrow_banner_yl,
+        uparrow_banner_w,
+        uparrow_banner_h
+      );
+      banner_ctx.drawImage(
+        downarrow,
+        downarrow_src_xl,
+        downarrow_src_xl,
+        downarrow_src_w,
+        downarrow_src_h,
+        downarrow_banner_xl,
+        downarrow_banner_yl,
+        downarrow_banner_w,
+        downarrow_banner_h
+      );
+      banner_ctx.drawImage(
+        backarrow,
+        backarrow_src_xl,
+        backarrow_src_xl,
+        backarrow_src_w,
+        backarrow_src_h,
+        backarrow_banner_xl,
+        backarrow_banner_yl,
+        backarrow_banner_w,
+        backarrow_banner_h
       );
       break;
     case "about":
@@ -1597,6 +1681,8 @@ function init() {
   help_txt = HELP_TXT.split("\n");
   faqs.update_text(FAQ_INITIAL_TEXT);
   abouttext.update_text(ABOUT_INITIAL_TEXT);
+  workshopstext.update_text(WORKSHOPS_INITIAL_TEXT);
+  projectstext.update_text(PROJECTS_INITIAL_TEXT);
   registrationtxt.update_text(REGISTRATION_TEXT);
 
   window.addEventListener("keydown", keyDownListener);

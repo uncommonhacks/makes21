@@ -429,7 +429,7 @@ a {
   .header-text {
     color: var(--header-font-color);
     font-family: var(--header-font-family);
-    font-size: 2.2vw;
+    font-size: 1.8vw;
     position: absolute;
     z-index: 2;
     text-shadow: 1px 2px rgba(0, 0, 0, 0.15);
@@ -470,12 +470,12 @@ a {
   }
 
   #register-text {
-    left: 75vw;
+    left: 76vw;
     top: 43.5vw;
   }
 
   #schedule-text {
-    left: 31vw;
+    left: 32vw;
     top: 43.5vw;
   }
 
@@ -486,17 +486,17 @@ a {
   }
 
   #about-text {
-    right: 76vw;
+    right: 76.5vw;
     top: 34.5vw;
   }
 
   #workshops-text {
-    left: 29.5vw;
+    left: 32vw;
     top: 20vw;
   }
 
   #projects-text {
-    right: 1vw;
+    right: 2vw;
     top: 20vw;
   }
 
