@@ -194,32 +194,43 @@ const BOUNDING_BOXES = [
   //   [BB10XL, BB10XH, BB10YL, BB10YH],
   //   [BB11XL, BB11XH, BB11YL, BB11YH],
 ];
-const TP1XL = 185;
-const TP1YL = 200;
-const TP1XH = 275;
-const TP1YH = 300;
-const TP2XL = 310;
-const TP2YL = 20;
-const TP2XH = 520;
-const TP2YH = 110;
-const TP3XL = 520;
-const TP3YL = 420;
-const TP3XH = 705;
-const TP3YH = 520;
-const TP4XL = 1020;
-const TP4YL = 350;
-const TP4XH = 1145;
-const TP4YH = 460;
-const TP5XL = 1060;
-const TP5YL = 135;
+const TP1XL = 105;
+const TP1YL = 400;
+const TP1XH = 370;
+const TP1YH = 500;
+
+const TP2XL = 320;
+const TP2YL = 210;
+const TP2XH = 550;
+const TP2YH = 310;
+
+const TP3XL = 370;
+const TP3YL = 520;
+const TP3XH = 550;
+const TP3YH = 650;
+
+const TP4XL = 600;
+const TP4YL = 210;
+const TP4XH = 850;
+const TP4YH = 310;
+
+const TP5XL = 900;
+const TP5YL = 210;
 const TP5XH = 1250;
-const TP5YH = 225;
+const TP5YH = 310;
+
+const TP6XL = 910;
+const TP6YL = 520;
+const TP6XH = 1100;
+const TP6YH = 650;
+
 const TELEPORT_BOXES = [
   [TP1XL, TP1XH, TP1YL, TP1YH],
   [TP2XL, TP2XH, TP2YL, TP2YH],
   [TP3XL, TP3XH, TP3YL, TP3YH],
   [TP4XL, TP4XH, TP4YL, TP4YH],
   [TP5XL, TP5XH, TP5YL, TP5YH],
+  [TP6XL, TP6XH, TP6YL, TP6YH]
 ];
 const TP1X = BB1XL;
 const TP1Y = BB1YL;
@@ -298,8 +309,8 @@ let is_about = 0;
 let is_registration = 0;
 let keyPresses = {};
 var prevX, prevY;
-var positionX = BB4XL;
-var positionY = BB4YL;
+var positionX = 300;
+var positionY = 512- CHARACTER_CANVAS_HEIGHT;
 
 let uparrow_src_xl = 0;
 let uparrow_src_yl = 0;
@@ -396,7 +407,11 @@ var about_person = new Image(100, 100);
 var schedule_person = new Image(100, 100);
 
 let about_header_text = document.getElementById("about-text");
+let workshops_header_text = document.getElementById("workshops-text");
+
 let faq_header_text = document.getElementById("faq-text");
+let projects_header_text = document.getElementById("projects-text");
+
 let register_header_text = document.getElementById("register-text");
 let schedule_header_text = document.getElementById("schedule-text");
 let sponsors_header_text = document.getElementById("sponsors-text");
@@ -1016,56 +1031,97 @@ function rect_contains(rect, x, y) {
  */
 function teleport_text_action(x, y) {
   if (rect_contains(TELEPORT_BOXES[0], x, y)) {
-    faq_header_text.setAttribute(
+    about_header_text.setAttribute(
+    //faq_header_text.setAttribute(
       "style",
-      "font-size: 2.8vw; left: 15.5vw; top: 17vw;"
+      // "font-size: 2.8vw;" // left: 15.5vw; top: 17vw;"
+      "color: red;"
     );
     header_text_changed = true;
   } else if (rect_contains(TELEPORT_BOXES[1], x, y)) {
-    register_header_text.setAttribute(
+    workshops_header_text.setAttribute(
       "style",
-      "font-size: 2.8vw; left: 26.2vw; top: 2.0vw;"
+      // "font-size: 2.8vw;" // left: 26.2vw; top: 2.0vw;"
+      "color: red;"
     );
     header_text_changed = true;
   } else if (rect_contains(TELEPORT_BOXES[2], x, y)) {
     schedule_header_text.setAttribute(
       "style",
-      "font-size: 2.8vw; left: 41.5vw; top: 34.2vw;"
+      // "font-size: 2.8vw;" // left: 26.2vw; top: 2.0vw;"
+      "color: red;"
     );
     header_text_changed = true;
   } else if (rect_contains(TELEPORT_BOXES[3], x, y)) {
-    about_header_text.setAttribute(
+    faq_header_text.setAttribute(
       "style",
-      "font-size: 2.8vw; right: 8.7vw; top: 29.5vw;"
+      // "font-size: 2.8vw;" // left: 26.2vw; top: 2.0vw;"
+      "color: red;"
     );
     header_text_changed = true;
   } else if (rect_contains(TELEPORT_BOXES[4], x, y)) {
-    sponsors_header_text.setAttribute(
+    projects_header_text.setAttribute(
       "style",
-      "font-size: 2.8vw; right: -0.5vw; top: 11.5vw;"
+      // "font-size: 2.8vw;" // left: 26.2vw; top: 2.0vw;"
+      "color: red;"
     );
     header_text_changed = true;
-  } else if (header_text_changed) {
-    faq_header_text.setAttribute(
-      "style",
-      "font-size: 2.2vw; left: 16vw; top: 17.7vw;"
-    );
+  } else if (rect_contains(TELEPORT_BOXES[5], x, y)) {
     register_header_text.setAttribute(
       "style",
-      "font-size: 2.2vw; left: 27.5vw; top: 2.6vw;"
+      // "font-size: 2.8vw;" // left: 26.2vw; top: 2.0vw;"
+      "color: red;"
+    );
+    header_text_changed = true;
+  }else if (header_text_changed) {
+    about_header_text.setAttribute(
+      "style",
+      // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
+      "color: #f9e512;"
+    );
+    workshops_header_text.setAttribute(
+      "style",
+      // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
+      "color: #f9e512;"
     );
     schedule_header_text.setAttribute(
       "style",
-      "font-size: 2.2vw; left: 42.8vw; top: 34.9vw;"
+      // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
+      "color: #f9e512;"
     );
-    about_header_text.setAttribute(
+    faq_header_text.setAttribute(
       "style",
-      "font-size: 2.2vw; right: 9.7vw; top: 30vw;"
+      // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
+      "color: #f9e512;"
     );
-    sponsors_header_text.setAttribute(
+    projects_header_text.setAttribute(
       "style",
-      "font-size: 2.2vw; right: 1vw; top: 12vw;"
+      // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
+      "color: #f9e512;"
     );
+    register_header_text.setAttribute(
+      "style",
+      // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
+      "color: #f9e512;"
+    );
+
+
+    // register_header_text.setAttribute(
+    //   "style",
+    //   "font-size: 2.2vw;" // left: 27.5vw; top: 2.6vw;"
+    // );
+    // schedule_header_text.setAttribute(
+    //   "style",
+    //   "font-size: 2.2vw;" // left: 42.8vw; top: 34.9vw;"
+    // );
+    // about_header_text.setAttribute(
+    //   "style",
+    //   "font-size: 2.2vw;" // right: 9.7vw; top: 30vw;"
+    // );
+    // sponsors_header_text.setAttribute(
+    //   "style",
+    //   "font-size: 2.2vw;" // right: 1vw; top: 12vw;"
+    // );
     header_text_changed = false;
   }
 }
