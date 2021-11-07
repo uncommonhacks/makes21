@@ -230,7 +230,7 @@ const TELEPORT_BOXES = [
   [TP3XL, TP3XH, TP3YL, TP3YH],
   [TP4XL, TP4XH, TP4YL, TP4YH],
   [TP5XL, TP5XH, TP5YL, TP5YH],
-  [TP6XL, TP6XH, TP6YL, TP6YH]
+  [TP6XL, TP6XH, TP6YL, TP6YH],
 ];
 const TP1X = BB1XL;
 const TP1Y = BB1YL;
@@ -310,7 +310,7 @@ let is_registration = 0;
 let keyPresses = {};
 var prevX, prevY;
 var positionX = 300;
-var positionY = 512- CHARACTER_CANVAS_HEIGHT;
+var positionY = 512 - CHARACTER_CANVAS_HEIGHT;
 
 let uparrow_src_xl = 0;
 let uparrow_src_yl = 0;
@@ -1032,7 +1032,7 @@ function rect_contains(rect, x, y) {
 function teleport_text_action(x, y) {
   if (rect_contains(TELEPORT_BOXES[0], x, y)) {
     about_header_text.setAttribute(
-    //faq_header_text.setAttribute(
+      //faq_header_text.setAttribute(
       "style",
       // "font-size: 2.8vw;" // left: 15.5vw; top: 17vw;"
       "color: red;"
@@ -1073,7 +1073,7 @@ function teleport_text_action(x, y) {
       "color: red;"
     );
     header_text_changed = true;
-  }else if (header_text_changed) {
+  } else if (header_text_changed) {
     about_header_text.setAttribute(
       "style",
       // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
@@ -1104,7 +1104,6 @@ function teleport_text_action(x, y) {
       // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
       "color: #f9e512;"
     );
-
 
     // register_header_text.setAttribute(
     //   "style",
@@ -1320,10 +1319,10 @@ function legalPosition(x, y) {
    * are contained in at least one box. */
   for (var i = 0; i < BOUNDING_BOXES.length; i++) {
     bb = BOUNDING_BOXES[i];
-    bbxl = bb[0] - CHARACTER_CANVAS_WIDTH;
-    bbxh = bb[1] + CHARACTER_CANVAS_WIDTH;
-    bbyl = bb[2] - CHARACTER_CANVAS_HEIGHT;
-    bbyh = bb[3] + CHARACTER_CANVAS_HEIGHT;
+    bbxl = bb[0] - CHARACTER_CANVAS_WIDTH / 2;
+    bbxh = bb[1] + CHARACTER_CANVAS_WIDTH / 2;
+    bbyl = bb[2] - CHARACTER_CANVAS_HEIGHT + 5;
+    bbyh = bb[3] + CHARACTER_CANVAS_HEIGHT - 40;
     console.log(bbxl, tlx, tlx, bbxh, bbyl, tly, tly, bbyh);
     if (bbxl <= tlx && tlx <= bbxh && bbyl <= tly && tly <= bbyh) {
       top_left_legal = true;
