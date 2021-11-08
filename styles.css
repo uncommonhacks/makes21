@@ -26,7 +26,8 @@
   --mobile-about-offset: 150vw;
   --mobile-faq-offset: 340vw;
   --mobile-schedule-offset: 530vw;
-  --mobile-sponsors-offset: 850vw;
+  --mobile-workshops-offset: 715vw;
+  --mobile-projects-offset: 840vw;
   --mobile-height: 1020vw;
   /* If world-height is updated, update the media query
     * at bottom of file too. */
@@ -155,7 +156,7 @@ a {
   left: 10vw;
   overflow: hidden;
   position: absolute;
-  top: calc(var(--mobile-about-offset) + 50vw);
+  top: calc(var(--mobile-about-offset) + 55vw);
   width: 8vw;
   z-index: 1;
 }
@@ -271,76 +272,89 @@ a {
   z-index: 1;
 }
 
-/** MOBILE - SPONSORS **/
-#gs {
-  width: 40vw;
-  left: 5vw;
+/** MOBILE - WORKSHOPS **/
+
+#mobile-workshops-img1 {
+  left: 2vw;
+  overflow: hidden;
   position: absolute;
-  top: calc(var(--mobile-sponsors-offset));
+  top: var(--mobile-workshops-offset);
+  width: 100vw;
   z-index: 1;
 }
 
-#peak6 {
-  width: 40vw;
-  right: 5vw;
+#mobile-workshops-img2 {
+  left: 10vw;
+  overflow: hidden;
   position: absolute;
-  top: calc(var(--mobile-sponsors-offset) + 5vw);
+  top: calc(var(--mobile-workshops-offset) + 75vw);
+  width: 8vw;
   z-index: 1;
 }
 
-#imc {
-  width: 46vw;
+#mobile-workshops-txt1 {
+  font-family: var(--header-font-family);
+  color: var(--header-font-color);
+  font-size: var(--header-font-size);
+  left: 12vw;
+  overflow: hidden;
   position: absolute;
-  right: 27vw;
-  top: calc(var(--mobile-sponsors-offset) + 26vw);
+  top: calc(var(--mobile-workshops-offset) + 90vw);
   z-index: 1;
 }
 
-#belvedere {
-  width: 40vw;
+#mobile-workshops-txt2 {
+  color: var(--body-font-color);
+  font-family: var(--body-font-family);
+  font-size: 4vw;
+  left: 16vw;
+  overflow: hidden;
   position: absolute;
-  left: 7vw;
-  top: calc(var(--mobile-sponsors-offset) + 50vw);
+  top: calc(var(--mobile-workshops-offset) + 100vw);
+  width: 70vw;
   z-index: 1;
 }
 
-#cdac {
-  width: 40vw;
+/** MOBILE - PROJECTS **/
+
+#mobile-projects-img1 {
+  right: 0vw;
+  overflow: hidden;
   position: absolute;
-  left: 53vw;
-  top: calc(var(--mobile-sponsors-offset) + 45vw);
+  top: var(--mobile-projects-offset);
+  width: 85vw;
   z-index: 1;
 }
 
-#n26 {
-  width: 25vw;
+#mobile-projects-img2 {
+  left: 10vw;
+  overflow: hidden;
   position: absolute;
-  left: 8vw;
-  top: calc(var(--mobile-sponsors-offset) + 110vw);
+  top: calc(var(--mobile-projects-offset) + 75vw);
+  width: 8vw;
   z-index: 1;
 }
 
-#pathrise {
-  width: 38vw;
+#mobile-projects-txt1 {
+  font-family: var(--header-font-family);
+  color: var(--header-font-color);
+  font-size: var(--header-font-size);
+  left: 12vw;
+  overflow: hidden;
   position: absolute;
-  left: 30vw;
-  top: calc(var(--mobile-sponsors-offset) + 140vw);
+  top: calc(var(--mobile-projects-offset) + 90vw);
   z-index: 1;
 }
 
-#flt {
-  width: 50vw;
+#mobile-projects-txt2 {
+  color: var(--body-font-color);
+  font-family: var(--body-font-family);
+  font-size: 4vw;
+  left: 16vw;
+  overflow: hidden;
   position: absolute;
-  left: 24vw;
-  top: calc(var(--mobile-sponsors-offset) + 90vw);
-  z-index: 1;
-}
-
-#smule {
-  width: 38vw;
-  position: absolute;
-  left: 52vw;
-  top: calc(var(--mobile-sponsors-offset) + 108vw);
+  top: calc(var(--mobile-projects-offset) + 100vw);
+  width: 70vw;
   z-index: 1;
 }
 
