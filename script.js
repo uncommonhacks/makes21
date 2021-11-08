@@ -24,9 +24,9 @@ const SCHEDULE_TXT_DAY_2 =
 const HACKER_GUIDE_URL = "https://github.com/uncommonhacks/guide";
 const HELP_TXT =
   "* Use W, A, S, D to move. \n" +
-  "* Click on the pins to\n" +
-  "   teleport around the \n" +
-  "   map.\n";
+  "* Click on the text\n" +
+  "   bubbles to teleport  \n" +
+  "   around the map.\n";
 const MLH_COC_URL = "https://static.mlh.io/docs/mlh-code-of-conduct.pdf";
 const HELP_BUTTON_RECT = [30, 110, 200, 250];
 const HELP_MLH_COC_RECT = [115, 1135, 270, 310];
@@ -1711,10 +1711,6 @@ function init() {
   downarrow.src = "./assets/down-04.svg";
   backarrow.src = "./assets/back-02.svg";
   bannerimg.src = "./assets/box-05.svg";
-  faq_person.src = "./assets/lighthouse_person_talk.png";
-  registration_person.src = "./assets/mayor_talk.png";
-  about_person.src = "./assets/resident_talk.png";
-  schedule_person.src = "./assets/mapshop_person_talk.png";
   schedule.src = "assets/schedule.svg";
   schedule_txt_day1 = SCHEDULE_TXT_DAY_1.split("\n");
   schedule_txt_day2 = SCHEDULE_TXT_DAY_2.split("\n");

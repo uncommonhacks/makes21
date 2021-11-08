@@ -23,9 +23,9 @@
   --header-font-color: #f9e512;
   --header-font-family: "silkscreen";
   --header-font-size: 8vw;
-  --mobile-about-offset: 200vw;
-  --mobile-faq-offset: 400vw;
-  --mobile-schedule-offset: 600vw;
+  --mobile-about-offset: 150vw;
+  --mobile-faq-offset: 340vw;
+  --mobile-schedule-offset: 530vw;
   --mobile-sponsors-offset: 850vw;
   --mobile-height: 1020vw;
   /* If world-height is updated, update the media query
