@@ -101,7 +101,7 @@ a {
   left: 0vw;
   overflow: hidden;
   position: absolute;
-  top: 45vw;
+  top:75vw;
   z-index: 1;
 }
 
@@ -143,11 +143,11 @@ a {
 /** MOBILE - ABOUT **/
 
 #mobile-about-img1 {
-  left: 0vw;
+  left: 10vw;
   overflow: hidden;
   position: absolute;
   top: var(--mobile-about-offset);
-  width: 100vw;
+  width: 80vw;
   z-index: 1;
 }
 
@@ -155,7 +155,7 @@ a {
   left: 10vw;
   overflow: hidden;
   position: absolute;
-  top: calc(var(--mobile-about-offset) + 90vw);
+  top: calc(var(--mobile-about-offset) + 50vw);
   width: 8vw;
   z-index: 1;
 }
@@ -167,7 +167,7 @@ a {
   left: 12vw;
   overflow: hidden;
   position: absolute;
-  top: calc(var(--mobile-about-offset) + 105vw);
+  top: calc(var(--mobile-about-offset) + 70vw);
   z-index: 1;
 }
 
@@ -178,7 +178,7 @@ a {
   left: 16vw;
   overflow: hidden;
   position: absolute;
-  top: calc(var(--mobile-about-offset) + 115vw);
+  top: calc(var(--mobile-about-offset) + 80vw);
   width: 70vw;
   z-index: 1;
 }
@@ -186,11 +186,11 @@ a {
 /** MOBILE - FAQ **/
 
 #mobile-faq-img1 {
-  left: 0vw;
+  left: 10vw;
   overflow: hidden;
   position: absolute;
   top: var(--mobile-faq-offset);
-  width: 100vw;
+  width: 80vw;
   z-index: 1;
 }
 
@@ -230,11 +230,11 @@ a {
 /** MOBILE - SCHEDULE **/
 
 #mobile-schedule-img1 {
-  left: 0vw;
+  left: 10vw;
   overflow: hidden;
   position: absolute;
   top: var(--mobile-schedule-offset);
-  width: 100vw;
+  width: 80vw;
   z-index: 1;
 }
 
@@ -242,7 +242,7 @@ a {
   left: 10vw;
   overflow: hidden;
   position: absolute;
-  top: calc(var(--mobile-schedule-offset) + 70vw);
+  top: calc(var(--mobile-schedule-offset) + 65vw);
   width: 8vw;
   z-index: 1;
 }
@@ -254,19 +254,19 @@ a {
   left: 12vw;
   overflow: hidden;
   position: absolute;
-  top: calc(var(--mobile-schedule-offset) + 84vw);
+  top: calc(var(--mobile-schedule-offset) + 79vw);
   z-index: 1;
 }
 
 #mobile-schedule-blk1 {
   color: var(--body-font-color);
   font-family: var(--body-font-family);
-  font-size: 3vw;
+  font-size: 4vw;
   height: 125vw;
   left: 10vw;
   overflow: auto;
   position: absolute;
-  top: calc(var(--mobile-schedule-offset) + 100vw);
+  top: calc(var(--mobile-schedule-offset) + 95vw);
   width: 80vw;
   z-index: 1;
 }
