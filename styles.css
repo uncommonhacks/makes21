@@ -457,7 +457,7 @@ a {
   } */
 
   #main-text {
-    font-size: 3.7vw;
+    font-size: 3.2vw;
     /* right: 21vw; */
     left: 1vw;
     top: 4.2vw;
@@ -465,18 +465,18 @@ a {
   }
 
   #faq-text {
-    left: 57.4vw;
-    top: 20vw;
+    left: 56.8vw;
+    top: 20.2vw;
   }
 
   #register-text {
-    left: 76vw;
-    top: 43.5vw;
+    left: 76.2vw;
+    top: 45.2vw;
   }
 
   #schedule-text {
-    left: 32vw;
-    top: 43.5vw;
+    left: 32.2vw;
+    top: 45.2vw;
   }
 
   #sponsors-text {
@@ -486,18 +486,18 @@ a {
   }
 
   #about-text {
-    right: 76.5vw;
-    top: 34.5vw;
+    right: 77.8vw;
+    top: 35.2vw;
   }
 
   #workshops-text {
-    left: 32vw;
-    top: 20vw;
+    left: 32.7vw;
+    top: 20.2vw;
   }
 
   #projects-text {
-    right: 2vw;
-    top: 20vw;
+    right: 1.8vw;
+    top: 20.2vw;
   }
 
   /** PINS **/
