@@ -1183,74 +1183,74 @@ function teleport_text_action(x, y) {
     //faq_header_text.setAttribute(
       "style",
       // "font-size: 2.8vw;" // left: 15.5vw; top: 17vw;"
-      "color: red;"
+      "color: #F4129B;"
     );
     header_text_changed = true;
   } else if (rect_contains(TELEPORT_BOXES[1], x, y)) {
     workshops_header_text.setAttribute(
       "style",
       // "font-size: 2.8vw;" // left: 26.2vw; top: 2.0vw;"
-      "color: red;"
+      "color: #F4129B;"
     );
     header_text_changed = true;
   } else if (rect_contains(TELEPORT_BOXES[2], x, y)) {
     schedule_header_text.setAttribute(
       "style",
       // "font-size: 2.8vw;" // left: 26.2vw; top: 2.0vw;"
-      "color: red;"
+      "color: #F4129B;"
     );
     header_text_changed = true;
   } else if (rect_contains(TELEPORT_BOXES[3], x, y)) {
     faq_header_text.setAttribute(
       "style",
       // "font-size: 2.8vw;" // left: 26.2vw; top: 2.0vw;"
-      "color: red;"
+      "color: #F4129B;"
     );
     header_text_changed = true;
   } else if (rect_contains(TELEPORT_BOXES[4], x, y)) {
     projects_header_text.setAttribute(
       "style",
       // "font-size: 2.8vw;" // left: 26.2vw; top: 2.0vw;"
-      "color: red;"
+      "color: #F4129B;"
     );
     header_text_changed = true;
   } else if (rect_contains(TELEPORT_BOXES[5], x, y)) {
     register_header_text.setAttribute(
       "style",
       // "font-size: 2.8vw;" // left: 26.2vw; top: 2.0vw;"
-      "color: red;"
+      "color: #F4129B;"
     );
     header_text_changed = true;
   }else if (header_text_changed) {
     about_header_text.setAttribute(
       "style",
       // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
-      "color: #f9e512;"
+      "color: #7096A9;"
     );
     workshops_header_text.setAttribute(
       "style",
       // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
-      "color: #f9e512;"
+      "color: #7096A9;"
     );
     schedule_header_text.setAttribute(
       "style",
       // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
-      "color: #f9e512;"
+      "color: #7096A9;"
     );
     faq_header_text.setAttribute(
       "style",
       // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
-      "color: #f9e512;"
+      "color: #7096A9;"
     );
     projects_header_text.setAttribute(
       "style",
       // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
-      "color: #f9e512;"
+      "color: #7096A9;"
     );
     register_header_text.setAttribute(
       "style",
       // "font-size: 2.2vw;" // left: 16vw; top: 17.7vw;"
-      "color: #f9e512;"
+      "color: #7096A9;"
     );
 
 
@@ -1737,7 +1737,7 @@ function init() {
   drape_canvas.addEventListener("click", drapeClickEventHandler);
 
   /* Load the background. Then enter the animation frame loop. */
-  img.src = "assets/main.png";
+  img.src = "assets/main_character.png";
   img.onload = function () {
     window.requestAnimationFrame(gameLoop);
     activate_help_state();

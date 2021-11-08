@@ -452,24 +452,23 @@ a {
   /** Headers **/
 
   .header-text {
-    color: var(--header-font-color);
+    color: #7096A9;
     font-family: var(--header-font-family);
     font-size: 1.8vw;
     position: absolute;
     z-index: 2;
-    text-shadow: 1px 2px rgba(0, 0, 0, 0.15);
   }
 
   .subhead {
     color: var(--body-font-color);
     font-family: var(--body-font-family);
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     position: absolute;
     z-index: 2;
     letter-spacing: 2px;
     /* right: 37.5vw; */
-    left: 1vw;
-    top: 11.6vw;
+    left: 4vw;
+    top: 15vw;
   }
 
   /* .info-text {
@@ -486,6 +485,15 @@ a {
     /* right: 21vw; */
     left: 1vw;
     top: 4.2vw;
+    text-shadow: none;
+  }
+
+  #main-text-img {
+    font-size: 3.2vw;
+    /* right: 21vw; */
+    left: 3.7vw;
+    top: 6.5vw;
+    width: 18vw;
     text-shadow: none;
   }
 
