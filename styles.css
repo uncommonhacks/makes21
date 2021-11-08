@@ -27,7 +27,8 @@
   --mobile-faq-offset: 340vw;
   --mobile-schedule-offset: 530vw;
   --mobile-workshops-offset: 715vw;
-  --mobile-projects-offset: 840vw;
+  --mobile-projects-offset: 845vw;
+  --mobile-footer-offset: 985vw;
   --mobile-height: 1020vw;
   /* If world-height is updated, update the media query
     * at bottom of file too. */
@@ -366,6 +367,17 @@ a {
   position: absolute;
   top: calc(var(--mobile-projects-offset) + 100vw);
   width: 70vw;
+  z-index: 1;
+}
+
+/** MOBILE - FOOTER **/
+
+#mobile-footer-img1 {
+  overflow: hidden;
+  position: absolute;
+  top: var(--mobile-footer-offset);
+  width: 12vw;
+  left: 44vw;
   z-index: 1;
 }
 
