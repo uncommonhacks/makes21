@@ -99,10 +99,20 @@ a {
 /** MOBILE - LANDING **/
 
 #mobile-landing-img1 {
-  left: 0vw;
+  right: 0vw;
   overflow: hidden;
   position: absolute;
-  top:75vw;
+  top:0vw;
+  width: 101vw;
+  z-index: 1;
+}
+
+#mobile-landing-img2 {
+  left: 4vw;
+  overflow: hidden;
+  position: absolute;
+  top: 70vw;
+  width: 92vw;
   z-index: 1;
 }
 
@@ -114,30 +124,31 @@ a {
   overflow: hidden;
   position: absolute;
   text-align: center;
-  top: 7vw;
+  display: none;
+  top: 62vw;
   z-index: 1;
 }
 
 #mobile-landing-txt2 {
   color: var(--body-font-color);
   font-family: var(--header-font-family);
-  font-size: 5vw;
-  left: 64vw;
+  font-size: 6vw;
+  left: 32vw;
   overflow: hidden;
   position: absolute;
-  top: 39vw;
+  top: 100vw;
   z-index: 1;
 }
 
 #mobile-landing-txt3 {
   color: var(--body-font-color);
   font-family: var(--header-font-family);
-  font-size: 5vw;
-  left: 64vw;
+  font-size: 6vw;
+  left: 34.8vw;
   overflow: hidden;
   position: absolute;
   text-decoration: underline;
-  top: 52vw;
+  top: 116vw;
   z-index: 1;
 }
 
