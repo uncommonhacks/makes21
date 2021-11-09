@@ -69,8 +69,8 @@ const FAQ_ANSWER_1 =
   "send out confirmation emails.";
 const FAQ_ANSWER_2 =
   "No, you do not need to be present for two days or even an entire " +
-  "day. Just indicate on the registration form which events you’ll be" + 
-  "attending. However, each day of Makes will feature workshops as" +
+  "day. Just indicate on the registration form which events you’ll be " + 
+  "attending. However, each day of Makes will feature workshops as " +
   "well as free time to work and seek mentorship that we’d love for " +
   "you to participate in!";
 const FAQ_ANSWER_3 =
@@ -81,21 +81,21 @@ const FAQ_ANSWER_4 =
   "experience. You will have no problem if you have taken any CS class " +
   "before but we also welcome all students to attend.";
 const FAQ_ANSWER_5 =
-  "We will be providing individually packed meals on Friday; on Saturday" +
+  "We will be providing individually packed meals on Friday; on Saturday " +
   "we will have lots of snacks and refreshments for participants.";
 const FAQ_ANSWER_6 =
-  "Yes, we will be accepting walk-ins on a first-come, first-served basis." +
+  "Yes, we will be accepting walk-ins on a first-come, first-served basis. " +
   "If you forgot to sign up, please try to come early to ensure you get a spot.";
 const FAQ_ANSWER_7 =
-  "No! This year, we are splitting Makes into workshops and a makeathon to" + 
+  "No! This year, we are splitting Makes into workshops and a makeathon to " + 
   "make it more accessible and convenient for everyone.";
 const FAQ_ANSWER_8 =
-  "No, Uncommon Makes is a much more informal, learning-based event. While" + 
-  "we’ll have project showcases and opportunities for collaboration and mentorship," +
-  "there won’t be various prize categories. Stay tuned for information about Hacks" +
+  "No, Uncommon Makes is a much more informal, learning-based event. While " + 
+  "we’ll have project showcases and opportunities for collaboration and mentorship, " +
+  "there won’t be various prize categories. Stay tuned for information about Hacks " +
   "2022 happening in April 2022!";
 const FAQ_ANSWER_9 =
-  "No, the event will not have any kind of competition and will not require a team." + 
+  "No, the event will not have any kind of competition and will not require a team. " + 
   "However, workshops and projects can be done in pairs or teams if you’d like!";
 const FAQ_ANSWER_10 =
   "Workshop materials such as code templates will be provided. We ask that you bring your own laptop.";
@@ -413,6 +413,7 @@ let smule_url = "http://hackp.ac/mlh-stickermule-hackathons";
 let smule_rect = [670, 795, 485, 560];
 
 var help = new Image(1000, 1000);
+var keys = new Image(5000, 5000);
 var help_clicked = false;
 let help_state = false;
 let help_exit = false;
@@ -879,6 +880,9 @@ function draw_help_txt(help_txt) {
       (105 + 50 * (i + 1)) * drape_scale
     );
   }
+  drape_ctx.drawImage(keys, 0, 0, 4000, 4000,
+    480 * drape_scale, 420 * drape_scale,
+    300 * drape_scale, 300 * drape_scale);
 }
 
 function draw_text(bctx, txt, font) {
@@ -889,17 +893,17 @@ function draw_text(bctx, txt, font) {
     if (txt.cblock + i < txt.blocks.length) {
       bctx.fillText(
         txt.blocks[txt.cblock + i],
-        txt.width * 0.06,
-        txt.font_size * (i + 2)
+        txt.width * 0.063,
+        txt.font_size * (i + 2.15)
       );
     }
   }
 }
 
 function draw_hdr(bctx, hdr) {
-  bctx.font = "90px Oswald";
+  bctx.font = "92px silkscreen";
   bctx.fillStyle = "#006699";
-  bctx.fillText(hdr, 233, 163);
+  bctx.fillText(hdr, 233, 150);
 }
 
 /*
@@ -1715,6 +1719,7 @@ function init() {
   schedule_txt_day1 = SCHEDULE_TXT_DAY_1.split("\n");
   schedule_txt_day2 = SCHEDULE_TXT_DAY_2.split("\n");
   help.src = "assets/help.svg";
+  keys.src = "assets/keys.svg"
   help_txt = HELP_TXT.split("\n");
   faqs.update_text(FAQ_INITIAL_TEXT);
   abouttext.update_text(ABOUT_INITIAL_TEXT);
