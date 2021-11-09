@@ -28,14 +28,14 @@ const HELP_TXT =
   "   bubbles to teleport  \n" +
   "   around the map.\n";
 const MLH_COC_URL = "https://static.mlh.io/docs/mlh-code-of-conduct.pdf";
-const HELP_BUTTON_RECT = [30, 110, 200, 250];
+const HELP_BUTTON_RECT = [40, 85, 430, 475];
 const HELP_MLH_COC_RECT = [115, 1135, 270, 310];
 const SCHED_EXIT_RECT = [370, 415, 85, 120];
 const DRAPE_EXIT_RECT = [370, 415, 35, 70];
 
-const WORKSHOPS_INITIAL_TEXT = "Workshop Information TBA";
+const WORKSHOPS_INITIAL_TEXT = "Stay tuned for workshop details!";
 
-const PROJECTS_INITIAL_TEXT = "Project Information";
+const PROJECTS_INITIAL_TEXT = "Projects e-quilt coming soon... keep an eye out after the event!";
 
 const ABOUT_INITIAL_TEXT = "The Uncommon Hacks team is bringing you Uncommon Makes," +
 " a collaborative makeathon and workshop series!"+

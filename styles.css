@@ -649,10 +649,11 @@ a {
   #help {
     margin: 0;
     position: absolute;
-    width: 4vw;
-    height: 4vw;
-    right: 0.5vw;
-    top: 1vw;
+    width: 3.2vw;
+    height: 3.2vw;
+    left: 3.5vw;
+    top: 34.5vw;
+    z-index: 1;
   }
 }
 
