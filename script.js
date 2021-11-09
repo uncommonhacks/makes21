@@ -1126,7 +1126,7 @@ function interaction_update() {
     // console.log(schedule_clear)
     banner_state = "empty";
     banner_exit = "empty";
-    if (!schedule_clear) {//if (!schedule_state && !schedule_clear) {
+    if (!schedule_state && !schedule_clear) {
       activate_schedule_state();
     }
   // } else if (dist(positionX, positionY, 1115, 255) < 45) {
@@ -1140,15 +1140,15 @@ function interaction_update() {
     // console.log("else!");
     banner_state = "empty";
     banner_exit = "empty";
+  }
+
+  if (dist(positionX, positionY, TP3X, TP3Y) >= 45) {
     if (schedule_state) {
       deactivate_schedule_state();
     } else if (schedule_clear) {
       schedule_clear = false;
-    } else if (sponsors_state) {
-      deactivate_sponsors_state();
-    } else if (sponsors_clear) {
-      sponsors_clear = false;
-  }}
+    }
+  }
 
   if (banner_state != prev_banner_state || redraw_banner) {
     if (banner_state === "empty") {
