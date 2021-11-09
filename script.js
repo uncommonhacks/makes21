@@ -54,13 +54,13 @@ const ABOUT_INITIAL_TEXT = "The Uncommon Hacks team is bringing you Uncommon Mak
 
 const FAQ_INITIAL_TEXT =
   "1. How can I apply to Uncommon Makes 2021? " +
-  "2. If I want to go to one workshop, do I have to attend the whole event and do I have to attend both days? " +
+  "2. If I want to go to one workshop, do I have to attend both days? " +
   "3. Can I participate remotely? " +
   "4. I’ve never coded before. Will I be able to participate in the workshops? " +
   "5. Will lunch or dinner be provided? " +
   "6. The event is tomorrow and I forgot to sign up! Can I still attend? " +
-  "7. I participated in Uncommon Makes in previous years. Will the event be the same? " +
-  "8. I participated in Uncommon Hacks last year. Will the event be the same? " +
+  "7. I participated in Uncommon Makes before, will the event be the same? " +
+  "8. I participated in Uncommon Hacks last year, will the event be the same? " +
   "9. Do I have to come to the event with a team? " +
   "10. Will materials (computers, hardware, etc.) be provided? ";
 const FAQ_ANSWER_1 =
