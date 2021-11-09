@@ -59,8 +59,8 @@ const FAQ_INITIAL_TEXT =
   "4. I’ve never coded before. Will I be able to participate in the workshops? " +
   "5. Will lunch or dinner be provided? " +
   "6. The event is tomorrow and I forgot to sign up! Can I still attend? " +
-  "7. I participated in Uncommon Makes before, will the event be the same? " +
-  "8. I participated in Uncommon Hacks last year, will the event be the same? " +
+  "7. I've participated in Uncommon Makes before, will this be the same? " +
+  "8. I participated in Uncommon Hacks last year, will this be the same? " +
   "9. Do I have to come to the event with a team? " +
   "10. Will materials (computers, hardware, etc.) be provided? ";
 const FAQ_ANSWER_1 =
@@ -894,7 +894,7 @@ function draw_text(bctx, txt, font) {
       bctx.fillText(
         txt.blocks[txt.cblock + i],
         txt.width * 0.063,
-        txt.font_size * (i + 2.15)
+        txt.font_size * (i + 2.4)
       );
     }
   }

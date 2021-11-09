@@ -12,7 +12,7 @@ class Pktext {
         // Check that we have a valid context to draw on/with before adding event handlers  
         this.width = canvas.width;
         this.height = canvas.height;
-        this.font_size = 120;
+        this.font_size = 110;
         this.font = (this.font_size).toString().concat("px Arial");
         this.canvas = canvas;
         this.ctx = bctx;
@@ -42,7 +42,7 @@ class Pktext {
         this.blocks = [""];
         var rect = this.canvas.getBoundingClientRect();
         var scaleX = this.canvas.width / rect.width;
-        var max_block_width = this.canvas.width * 1.5;
+        var max_block_width = this.canvas.width * 2.46;
         for(var i = 0; i < this.words.length; i++) {
             n = this.blocks.length - 1;
             new_block_width = this.ctx.measureText(this.blocks[n].concat(this.words[i]).concat("...")).width * scaleX;
