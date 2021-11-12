@@ -14,13 +14,13 @@ const SCHEDULE_TXT_DAY_1 ="6:00|pm Opening & Introduction\n" +
   "6:30|pm Dynamic HTML (TBA)\n"+
   "\n" +
   "7:30|pm Dinner (3rd Floor Commons)\n"+
-  "\n" +
-  "8:00|pm Data Visualization (Crerar 390)\n" +
+  "7:45|pm Team Formation (Crerar 390)\n"+
+  "\n"+
+  "8:15|pm Data Visualization (Crerar 390)\n" +
   "\n" +
   "9:00|pm Web Styling (Crerar 390)\n"+
   "\n"+
-  "9:45|pm Team Formation & Work Time\n" +
-  "11:30|pm Conclusion of Makes Day 1\n"
+  "9:45|pm Team Formation & Work Time Until 11:30 PM\n"
 const SCHEDULE_TXT_DAY_2 =
     "1:00|pm Mentor check-in/work\n" +
     "\n" +
