@@ -5,22 +5,28 @@
 /** CONSTANTS **/
 
 const SCHEDULE_TXT_DAY_1 ="6:00|pm Opening & Introduction\n" +
+  "| (Crerar 390)\n"+
   "\n" +
-  "6:30|pm WS1 (Dynamic HTML)\n" +
+  "6:30|pm Oscillations: Algorithmic\n"+
+  "|Animations in HTML/CSS/JS\n" +
+  "| (Crerar 390)\n"+
   "\n" +
-  "7:30|pm Dinner\n" +
+  "6:30|pm Dynamic HTML (TBA)\n"+
   "\n" +
-  "8:00|pm WS2 (Data Visualization)\n" +
+  "7:30|pm Dinner (3rd Floor Commons)\n"+
   "\n" +
-  "8:45|pm Team Formation & Work Time\n" +
+  "8:00|pm Data Visualization (Crerar 390)\n" +
   "\n" +
+  "9:00|pm Web Styling (Crerar 390)\n"+
+  "\n"+
+  "9:45|pm Team Formation & Work Time\n" +
   "11:30|pm Conclusion of Makes Day 1\n"
 const SCHEDULE_TXT_DAY_2 =
     "1:00|pm Mentor check-in/work\n" +
     "\n" +
-    "2:00|pm Snacks + <activity> Break\n" +
+    "2:30|pm Snacks\n" +
     "\n" +
-    "5:00|pm Closing + showcase\n"
+    "5:00|pm Closing + showcase (Crerar 130)\n"
 const HACKER_GUIDE_URL = "https://github.com/uncommonhacks/guide";
 const HELP_TXT =
   "* Use W, A, S, D to move. \n" +
