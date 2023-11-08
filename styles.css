@@ -672,3 +672,14 @@ a {
     height: 100vh;
   }
 }
+
+#makes2023 {
+  width: 100%;
+  background: #ea7754;
+  font-size: 2rem;
+  font-family: open-sans-semibold;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  display: block;
+}
